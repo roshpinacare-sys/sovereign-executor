@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-18T14:37:28.098885+00:00",
+  "at": "2026-10-18T15:36:39.700438+00:00",
   "tasks": 3,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"agent-9-vault-sync.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 5}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 5}, {\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStrea",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 8}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 7}, {\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 3},",
         "REPO-ACTIONS-DISABLED: [\"saos-dex\", \"p-959c444\", \"p-2c31ddb\", \"p-340a4d0\", \"p-7f4f0cf\", \"p-d1e4e20\", \"p-67fc624\", \"p-6e4c69a\", \"p-3bc7334\", \"p-7346107\", \"p-6da1706\", \"p-ded40bb\", \"p-0b07173\", \"p-2698a44\", \"p-780c6b2\", \"p-b696ff4\", \"p-1850070\", \"p-7bc88eb\"]"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "fc304042342c",
+        "engineHead": "bcd6eaec5ec9",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,15 +29,15 @@
           "2026-10-15": 14,
           "2026-10-16": 10,
           "2026-10-17": 11,
-          "2026-10-18": 5
+          "2026-10-18": 6
         },
-        "logWindow": 68
+        "logWindow": 69
       }
     },
     {
       "task": "economy-book",
       "ok": true,
-      "outcome": "skip-lock"
+      "outcome": "sealed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
