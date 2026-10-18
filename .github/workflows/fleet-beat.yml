@@ -29,7 +29,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Beat (read-only tasks over the private fleet)
+      - name: Bun 1.3.14 (the book's home version — economy-book task needs the engine's runtime)
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+
+      - name: Beat (read-only fleet tasks + the owner-approved write-path economy-book task)
         env:
           SOVEREIGN_PAT: ${{ secrets.SOVEREIGN_PAT }}
         run: python3 scripts/beat.py

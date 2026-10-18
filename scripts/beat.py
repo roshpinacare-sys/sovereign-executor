@@ -9,6 +9,9 @@
 # pull_request target can ever reach the secret. Receipts are pseudonymous (p-<sha256[:7]>).
 # Fail-isolation: each task runs in its own subprocess; one red task never kills the beat;
 # the beat exits non-zero if ANY task failed (honest red), receipts committed BEFORE eval.
+# Leak-law: every string that could reach a public receipt passes clean() — the PAT can
+# never land on the public plane, not even inside an error message (CalledProcessError
+# embeds the full clone command, which carries the credential).
 import json, os, subprocess, sys
 from datetime import datetime, timezone
 
@@ -18,6 +21,25 @@ RECEIPT = os.path.join(ROOT, 'receipts', 'fleet-beat', 'last.json')
 PAT = os.environ.get('SOVEREIGN_PAT', '')
 
 
+def clean(s):
+    """Scrub the credential out of anything that might reach a public receipt."""
+    s = str(s)
+    if PAT:
+        s = s.replace(PAT, '***REDACTED***')
+    return s
+
+
+def clone(url, dst, depth=None):
+    """PAT-carrying clone whose failure NEVER embeds the credential (fail-closed)."""
+    cmd = ['git', 'clone', '-q']
+    if depth:
+        cmd += ['--depth', str(depth)]
+    cmd += [url, dst]
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError(clean(r.stderr)[-300:] or 'clone failed')
+
+
 def task_census(args):
     """Full-fleet census on free minutes: clone the public runner-kit, run its census with
     the sovereign PAT so the private supplement fills (28 repos) — the visibility the CI
@@ -25,16 +47,15 @@ def task_census(args):
     kit = args.get('repo', 'roshpinacare-sys/sovereign-runner-kit')
     dst = os.path.join('/tmp', 'beat-census-kit')
     subprocess.run(['rm', '-rf', dst], check=False)
-    subprocess.run(['git', 'clone', '-q', '--depth', '1',
-                    f'https://x-access:{PAT}@github.com/{kit}.git', dst], check=True)
+    clone(f'https://x-access:{PAT}@github.com/{kit}.git', dst, depth=1)
     out = os.path.join(ROOT, 'receipts', 'fleet-beat', 'census.json')
     # CI has no GITHUB_TOKEN env and no pat.env file — the sovereign PAT IS the token
     env = dict(os.environ, CENSUS_OUT=out, GITHUB_TOKEN=PAT, FLEET_TOKEN=PAT)
     r = subprocess.run([sys.executable, os.path.join(dst, 'scripts', 'fleet-census.py')],
                        cwd=dst, env=env, capture_output=True, text=True, timeout=900)
     tail = (r.stdout or '').strip().splitlines()[-2:] if r.stdout else []
-    return {'ok': r.returncode == 0, 'tail': tail,
-            'err': ((r.stderr or '')[-300:] if r.returncode else '')}
+    return {'ok': r.returncode == 0, 'tail': [clean(t) for t in tail],
+            'err': clean((r.stderr or '')[-300:]) if r.returncode else ''}
 
 
 def task_yield_snapshot(args):
@@ -73,7 +94,46 @@ def task_yield_snapshot(args):
     return {'ok': True, 'snapshot': snap}
 
 
-TASKS = {'private-census': task_census, 'yield-snapshot': task_yield_snapshot}
+def task_economy_book(args):
+    """Write-path task (owner approval verbatim in state/beat-tasks.json): the economy
+    book breathes on FREE public minutes. Runs the book repo's OWN runner
+    (run-economy-beat.mjs) UNMODIFIED — zero changes to the book's lineage. The repo's
+    own single-writer heartbeat lock decides everything: host writer alive (<30min) →
+    the beat SKIPS honestly; lock stale (e.g. sandbox wiped) → the executor adopts and
+    keeps the book breathing. Receipts carry the OUTCOME WORD only — no book numbers,
+    no book content ever lands on this public plane. Exit 3 = the repo's own RACE-LOST
+    fail-closed race law — benign (canonical adopted, next beat re-seals), counted ok.
+    Full clone (not depth-1): the runner reads HEAD~1 for its race parent check."""
+    repo = args.get('repo', 'roshpinacare-sys/fleet-economy')
+    writer = args.get('writer', 'sovereign-executor-beat')
+    dst = os.path.join('/tmp', 'beat-economy')
+    subprocess.run(['rm', '-rf', dst], check=False)
+    clone(f'https://x-access:{PAT}@github.com/{repo}.git', dst)
+    env = dict(os.environ, BEAT_SECONDS='180', ECONOMY_WRITER=writer)
+    try:
+        r = subprocess.run(['bun', 'run-economy-beat.mjs'], cwd=dst, env=env,
+                           capture_output=True, text=True, timeout=540)
+        code = r.returncode
+        out = r.stdout or ''
+    except subprocess.TimeoutExpired:
+        code, out = -1, ''
+    if code == 0 and 'SKIP' in out:
+        outcome = 'skip-lock'          # host writer holds the book — one writer, one truth
+    elif code == 0:
+        outcome = 'sealed'             # the book breathed + verified + sealed to git
+    elif code == 3:
+        outcome = 'race-lost-fail-closed'  # the repo's own honest race law
+    else:
+        outcome = 'failed'
+    snap = {'at': datetime.now(timezone.utc).isoformat(),
+            'outcome': outcome, 'writer': writer, 'exit': code}
+    out_path = os.path.join(ROOT, 'receipts', 'fleet-beat', 'economy-book.json')
+    json.dump(snap, open(out_path, 'w'), indent=2)
+    return {'ok': outcome != 'failed', 'outcome': outcome}
+
+
+TASKS = {'private-census': task_census, 'yield-snapshot': task_yield_snapshot,
+         'economy-book': task_economy_book}
 
 
 def main():
@@ -89,13 +149,13 @@ def main():
             r = fn(t)
             results.append({'task': tid, **r}); failed += 0 if r.get('ok') else 1
         except Exception as e:
-            results.append({'task': tid, 'ok': False, 'error': str(e)[:200]}); failed += 1
+            results.append({'task': tid, 'ok': False, 'error': clean(e)[:200]}); failed += 1
     receipt = {
         'schema': 'saos.executor.fleet-beat/1',
         'at': datetime.now(timezone.utc).isoformat(),
         'tasks': len(results), 'failed': failed,
         'results': results,
-        'secretSurface': 'SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo',
+        'secretSurface': 'SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)',
     }
     os.makedirs(os.path.dirname(RECEIPT), exist_ok=True)
     json.dump(receipt, open(RECEIPT, 'w'), indent=2, ensure_ascii=False)
