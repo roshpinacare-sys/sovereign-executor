@@ -163,7 +163,11 @@ def self_test():
         raised, msg = True, str(e)
     except Exception as e:  # any other exception type is itself a leak-law violation
         raised, msg = False, clean(e)
-    check('clone-fail-closed-no-credential', raised and PAT not in msg,
+    # CI lesson (run 39136318673, 2026-10-18): with PAT='' the expression
+    # `PAT not in msg` is ALWAYS False ('' in anything == True) — the check
+    # must treat credential-absence as vacuously clean, not as a leak.
+    credential_clean = (PAT not in msg) if PAT else True
+    check('clone-fail-closed-no-credential', raised and credential_clean,
           f'(raised={raised}, msg={msg[:80]})')
     reg = json.load(open(REGISTRY))
     drift = [t.get('id') for t in reg.get('tasks', []) if t.get('id') not in TASKS]

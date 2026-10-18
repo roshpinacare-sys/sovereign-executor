@@ -66,6 +66,8 @@ jobs:
 
       - name: Law self-test (leak-law + task-registry drift prove themselves every beat)
         if: steps.gate.outputs.run == 'true'
+        env:
+          SOVEREIGN_PAT: ${{ secrets.SOVEREIGN_PAT }}
         run: python3 scripts/beat.py --self-test
 
       - name: Beat (read-only fleet tasks + the owner-approved write-path economy-book task)
