@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-18T17:35:56.981432+00:00",
+  "at": "2026-10-18T18:35:39.882829+00:00",
   "tasks": 3,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 4}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"world-evolver.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 2",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 5}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"world-evolver.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 1",
         "REPO-ACTIONS-DISABLED: [\"saos-dex\", \"p-959c444\", \"p-2c31ddb\", \"p-340a4d0\", \"p-7f4f0cf\", \"p-d1e4e20\", \"p-67fc624\", \"p-6e4c69a\", \"p-3bc7334\", \"p-7346107\", \"p-6da1706\", \"p-ded40bb\", \"p-0b07173\", \"p-2698a44\", \"p-780c6b2\", \"p-b696ff4\", \"p-1850070\", \"p-7bc88eb\"]"
       ],
       "err": ""
