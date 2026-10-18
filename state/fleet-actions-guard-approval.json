@@ -1,0 +1,26 @@
+{
+  "schema": "saos.executor.actions-guard-approval/1",
+  "ownerApproval": {
+    "verbatim": "להחזיר לבדוק למה כובו ולתקן ולדחוף שהכל יעבוד כמו שצריך לא לכבות לפתור בעיות ואם נפתר וממש אין צורך והכל מתואם אפשר תלוי מה הסיבה להחלטות תמשיך ודחוף",
+    "trace": "1a1512554a26f66d",
+    "session": "web-16cb7ad8-b07d-40c0-bff6-116022a3f2c1",
+    "channel": "zai-web",
+    "date": "2026-10-18",
+    "meaning": "the owner ORDERED the re-arm of the 18 repos whose repo-level Actions switches were found disabled (wave-19.8 forensics: workflow-level states all active; only the repo switch off; GitHub does not flip repo switches for billing — a manual/policy action, actor unprovable via API: org audit-log 404 to the fleet PAT). STANDING ORDER: these switches stay ON; the hourly beat re-arms any of them found OFF again and records it. Scope discipline: ONLY the approved set below (pseudonym-matched); any NEW disable outside the set is measured and reported, never auto-re-armed"
+  },
+  "approvedSet": {
+    "publicNamed": ["saos-dex"],
+    "privatePseudonyms": ["p-959c444", "p-2c31ddb", "p-340a4d0", "p-7f4f0cf", "p-d1e4e20", "p-67fc624", "p-6e4c69a", "p-3bc7334", "p-7346107", "p-6da1706", "p-ded40bb", "p-0b07173", "p-2698a44", "p-780c6b2", "p-b696ff4", "p-1850070", "p-7bc88eb"],
+    "pseudonymLaw": "p-<sha256(name)[:7]> — the alias map is owner-side only; the guard computes the pseudonym at runtime to match scope without ever naming a private repo here"
+  },
+  "forensics": {
+    "disableWindow": "between 11:49Z (last completed runs) and 14:37Z (first census seeing disabled), 2026-10-18",
+    "evidence": [
+      "all 12 saos-dex workflows state=active while repo switch enabled=false — repo-level toggle only",
+      "stuck-queued dispatches on saos-dex at 16:31 (dex-beat, hive-heartbeat) — a fleet agent attempted runs after the disable; they cannot start until re-armed",
+      "org audit-log 404 to the fleet PAT (admin-only) — actor unprovable from the API plane",
+      "GitHub does not auto-flip repo-level Actions switches for billing (it blocks run START instead); scheduled-workflow auto-disable needs 60 days inactivity — both ruled out"
+    ],
+    "stuckRunsNote": "after re-arm, the 16:31 stuck runs may start immediately — that is the fleet's own lanes resuming, expected and wanted"
+  }
+}

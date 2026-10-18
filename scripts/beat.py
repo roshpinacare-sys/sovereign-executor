@@ -94,6 +94,21 @@ def task_yield_snapshot(args):
     return {'ok': True, 'snapshot': snap}
 
 
+def task_actions_guard(args):
+    """The hourly switch-guard (wave-19.8, owner order trace 1a1512554a26f66d verbatim in
+    state/fleet-actions-guard-approval.json): 18 repo-level Actions switches were found
+    disabled by an unprovable actor. The beat verifies the APPROVED set hourly and re-arms
+    any found OFF again — the fleet self-heals within the hour instead of silently dying.
+    Scope discipline: ONLY the approved set (saos-dex + 17 pseudonyms); anything else found
+    OFF is measured and reported, never touched. GET-verified after every PUT."""
+    r = subprocess.run([sys.executable, os.path.join(ROOT, 'scripts', 'fleet_actions_guard.py')],
+                       env=dict(os.environ, SOVEREIGN_PAT=PAT),
+                       capture_output=True, text=True, timeout=600)
+    tail = (r.stdout or '').strip().splitlines()[-2:]
+    return {'ok': r.returncode == 0, 'tail': [clean(t) for t in tail],
+            'err': clean((r.stderr or '')[-200:]) if r.returncode else ''}
+
+
 def task_economy_book(args):
     """Write-path task (owner approval verbatim in state/beat-tasks.json): the economy
     book breathes on FREE public minutes. Runs the book repo's OWN runner
@@ -133,7 +148,7 @@ def task_economy_book(args):
 
 
 TASKS = {'private-census': task_census, 'yield-snapshot': task_yield_snapshot,
-         'economy-book': task_economy_book}
+         'actions-guard': task_actions_guard, 'economy-book': task_economy_book}
 
 
 def self_test():
