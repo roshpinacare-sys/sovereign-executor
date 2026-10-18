@@ -28,11 +28,13 @@ def task_census(args):
     subprocess.run(['git', 'clone', '-q', '--depth', '1',
                     f'https://x-access:{PAT}@github.com/{kit}.git', dst], check=True)
     out = os.path.join(ROOT, 'receipts', 'fleet-beat', 'census.json')
-    env = dict(os.environ, CENSUS_OUT=out)
+    # CI has no GITHUB_TOKEN env and no pat.env file — the sovereign PAT IS the token
+    env = dict(os.environ, CENSUS_OUT=out, GITHUB_TOKEN=PAT, FLEET_TOKEN=PAT)
     r = subprocess.run([sys.executable, os.path.join(dst, 'scripts', 'fleet-census.py')],
                        cwd=dst, env=env, capture_output=True, text=True, timeout=900)
     tail = (r.stdout or '').strip().splitlines()[-2:] if r.stdout else []
-    return {'ok': r.returncode == 0, 'tail': tail, 'err': (r.stderr or '')[-300:] if r.returncode else ''}
+    return {'ok': r.returncode == 0, 'tail': tail,
+            'err': ((r.stderr or '')[-300:] if r.returncode else '')}
 
 
 def task_yield_snapshot(args):
@@ -45,6 +47,8 @@ def task_yield_snapshot(args):
     subprocess.run(['git', 'clone', '-q', '--depth', '1', url, dst], check=True)
     last = os.path.join(dst, 'receipts', 'fleet-yield', 'last.json')
     d = json.load(open(last)) if os.path.exists(last) else {}
+    if not d:
+        return {'ok': False, 'error': 'no fleet-yield/last.json in source repo'}
     log = os.path.join(dst, 'receipts', 'fleet-yield', 'log.jsonl')
     entries = []
     if os.path.exists(log):

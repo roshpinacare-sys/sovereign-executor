@@ -34,7 +34,8 @@ jobs:
           SOVEREIGN_PAT: ${{ secrets.SOVEREIGN_PAT }}
         run: python3 scripts/beat.py
 
-      - name: Publish receipts only if changed (commit + rebase-retry push)
+      - name: Publish receipts only if changed (commit + rebase-retry push) — evidence lands even on red
+        if: always()
         run: |
           git config user.name "fleet-beat[bot]"
           git config user.email "fleet-beat[bot]@users.noreply.github.com"
