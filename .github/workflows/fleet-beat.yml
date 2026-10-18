@@ -8,10 +8,16 @@ name: fleet-beat
 # SECRET-SURFACE LAW: schedule + workflow_dispatch ONLY. No pull_request trigger may
 # ever be added (a fork PR could otherwise reach the secret). Every addition to
 # .github/workflows/ must keep this law — reviewers enforce, the beat re-reads.
+# SCHEDULE-DENSITY LAW (wave-19.4, measured): GitHub DROPS scheduled events under load —
+# measured today: 1 fired slot out of 7 since repo creation. Cron density is therefore
+# x4 ('*/15') and the INTERVAL GATE keeps the beat lean: a slot runs the full beat only
+# if >=55min passed since the last beat (skipped slots are green+silent, ~seconds, zero
+# minutes). Deterministic upgrade path stays the owner's self-hosted runner (zero minutes,
+# zero drops) — see sovereign-runner-kit/scripts/sovereign-runner-register.sh.
 
 on:
   schedule:
-    - cron: '37 * * * *'   # hourly — full private-fleet visibility for free
+    - cron: '*/15 * * * *'   # x4 density — GitHub drops scheduled events under load (measured 1/7 today); the interval gate keeps slots lean
   workflow_dispatch:
 
 permissions:
@@ -29,21 +35,47 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Interval gate (a slot runs the full beat only if >=55min since the last beat)
+        id: gate
+        run: |
+          python3 - << 'EOF'
+          import json, os
+          from datetime import datetime, timezone
+          run = 'true'
+          p = 'receipts/fleet-beat/last.json'
+          if os.path.exists(p):
+              try:
+                  d = json.load(open(p))
+                  at = datetime.fromisoformat(str(d['at']).replace('Z', '+00:00'))
+                  age = (datetime.now(timezone.utc) - at).total_seconds() / 60
+                  if age < 55:
+                      print(f'interval gate: last beat {int(age)}min ago (<55) — this slot skipped honestly (green, zero minutes)')
+                      run = 'false'
+              except Exception as e:
+                  print(f'interval gate: unreadable receipt ({e}) — running the beat (fail-open to real work, never fail-open to silence)')
+          print(f'gate verdict: {run}')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'run={run}\n')
+          EOF
+
       - name: Bun 1.3.14 (the book's home version — economy-book task needs the engine's runtime)
+        if: steps.gate.outputs.run == 'true'
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.3.14
 
       - name: Law self-test (leak-law + task-registry drift prove themselves every beat)
+        if: steps.gate.outputs.run == 'true'
         run: python3 scripts/beat.py --self-test
 
       - name: Beat (read-only fleet tasks + the owner-approved write-path economy-book task)
+        if: steps.gate.outputs.run == 'true'
         env:
           SOVEREIGN_PAT: ${{ secrets.SOVEREIGN_PAT }}
         run: python3 scripts/beat.py
 
       - name: Publish receipts only if changed (commit + rebase-retry push) — evidence lands even on red
-        if: always()
+        if: always() && steps.gate.outputs.run == 'true'
         run: |
           git config user.name "fleet-beat[bot]"
           git config user.email "fleet-beat[bot]@users.noreply.github.com"
@@ -61,6 +93,7 @@ jobs:
           exit 1
 
       - name: Evaluate (honest red if any task failed)
+        if: steps.gate.outputs.run == 'true'
         run: |
           FAILED=$(python3 -c "import json; print(json.load(open('receipts/fleet-beat/last.json'))['failed'])")
           echo "tasks failed: $FAILED"
