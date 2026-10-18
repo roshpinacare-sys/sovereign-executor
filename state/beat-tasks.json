@@ -1,0 +1,8 @@
+{
+  "schema": "saos.executor.beat-tasks/1",
+  "note": "read-only tasks only until owner approves write-path tasks; adding a task is a data edit",
+  "tasks": [
+    { "id": "private-census", "repo": "roshpinacare-sys/sovereign-runner-kit" },
+    { "id": "yield-snapshot", "repo": "roshpinacare-sys/Autonomy" }
+  ]
+}

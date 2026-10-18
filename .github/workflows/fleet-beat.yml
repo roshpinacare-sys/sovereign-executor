@@ -1,0 +1,58 @@
+name: fleet-beat
+
+# fleet-beat — the sovereign executor's consolidated carrier (free public minutes).
+# Why this repo is PUBLIC: Actions minutes are unlimited-free for public repos; private
+# repos hit the org spending wall. Smart separation: private CONTENT stays private —
+# this plane executes read-only tasks over the fleet via the encrypted SOVEREIGN_PAT
+# secret and publishes pseudonymous receipts only.
+# SECRET-SURFACE LAW: schedule + workflow_dispatch ONLY. No pull_request trigger may
+# ever be added (a fork PR could otherwise reach the secret). Every addition to
+# .github/workflows/ must keep this law — reviewers enforce, the beat re-reads.
+
+on:
+  schedule:
+    - cron: '37 * * * *'   # hourly — full private-fleet visibility for free
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fleet-beat
+  cancel-in-progress: false
+
+jobs:
+  beat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Beat (read-only tasks over the private fleet)
+        env:
+          SOVEREIGN_PAT: ${{ secrets.SOVEREIGN_PAT }}
+        run: python3 scripts/beat.py
+
+      - name: Publish receipts only if changed (commit + rebase-retry push)
+        run: |
+          git config user.name "fleet-beat[bot]"
+          git config user.email "fleet-beat[bot]@users.noreply.github.com"
+          git add receipts/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "fleet-beat receipts unchanged — nothing to publish"
+            exit 0
+          fi
+          git commit -m "fleet-beat: receipts $(date -u +%FT%TZ) [skip ci]"
+          for i in 1 2 3; do
+            if git pull --rebase -X theirs --autostash origin main && git push origin HEAD:main; then exit 0; fi
+            echo "push race, retry ${i}"; sleep 8
+          done
+          echo "could not publish fleet-beat receipts after 3 attempts"
+          exit 1
+
+      - name: Evaluate (honest red if any task failed)
+        run: |
+          FAILED=$(python3 -c "import json; print(json.load(open('receipts/fleet-beat/last.json'))['failed'])")
+          echo "tasks failed: $FAILED"
+          test "$FAILED" = "0"
