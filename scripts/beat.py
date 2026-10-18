@@ -65,7 +65,7 @@ def task_yield_snapshot(args):
     dst = os.path.join('/tmp', 'beat-yield-src')
     subprocess.run(['rm', '-rf', dst], check=False)
     url = f'https://x-access:{PAT}@github.com/{src}.git' if PAT else f'https://github.com/{src}.git'
-    subprocess.run(['git', 'clone', '-q', '--depth', '1', url, dst], check=True)
+    clone(url, dst, depth=1)  # leak-law: same fail-closed clone() as every other task
     last = os.path.join(dst, 'receipts', 'fleet-yield', 'last.json')
     d = json.load(open(last)) if os.path.exists(last) else {}
     if not d:
@@ -136,7 +136,53 @@ TASKS = {'private-census': task_census, 'yield-snapshot': task_yield_snapshot,
          'economy-book': task_economy_book}
 
 
+def self_test():
+    """The laws prove themselves every beat — retro-hardened (owner: 'וחזק אחורה').
+    1. leak-law: clean() scrubs the credential from any receipt-bound string.
+    2. fail-closed clone: a failing clone raises RuntimeError with ZERO credential.
+    3. registry drift: every task declared in beat-tasks.json exists in TASKS.
+    4. receipts plane writable (evidence can always land)."""
+    ok = bad = 0
+    def check(name, cond, extra=''):
+        nonlocal ok, bad
+        if cond:
+            ok += 1; print(f'selftest {name}: PASS')
+        else:
+            bad += 1; print(f'selftest {name}: FAIL {extra}')
+    if PAT:
+        probe = f'fatal: unable to access https://x-access:{PAT}@github.com/o/r.git/'
+        scrubbed = clean(probe)
+        check('clean-law-scrubs-credential', PAT not in scrubbed and '***REDACTED***' in scrubbed)
+    else:
+        print('selftest clean-law-scrubs-credential: SKIP (no credential material in env — unexercisable, honestly not green)')
+    try:
+        clone(f'https://x-access:{PAT}@github.com/roshpinacare-sys/__no_such_repo_leaklaw__.git',
+              '/tmp/beat-selftest-leak')
+        raised, msg = False, ''
+    except RuntimeError as e:
+        raised, msg = True, str(e)
+    except Exception as e:  # any other exception type is itself a leak-law violation
+        raised, msg = False, clean(e)
+    check('clone-fail-closed-no-credential', raised and PAT not in msg,
+          f'(raised={raised}, msg={msg[:80]})')
+    reg = json.load(open(REGISTRY))
+    drift = [t.get('id') for t in reg.get('tasks', []) if t.get('id') not in TASKS]
+    check('task-registry-no-drift', not drift, f'drift={drift}')
+    try:
+        os.makedirs(os.path.dirname(RECEIPT), exist_ok=True)
+        probe_file = os.path.join(os.path.dirname(RECEIPT), '.selftest-probe')
+        json.dump({'at': datetime.now(timezone.utc).isoformat()}, open(probe_file, 'w'))
+        os.remove(probe_file)
+        check('receipts-plane-writable', True)
+    except Exception as e:
+        check('receipts-plane-writable', False, clean(e)[:80])
+    print(f'beat selftest: {ok} passed, {bad} failed')
+    return 1 if bad else 0
+
+
 def main():
+    if '--self-test' in sys.argv:
+        return self_test()
     reg = json.load(open(REGISTRY))
     results = []
     failed = 0

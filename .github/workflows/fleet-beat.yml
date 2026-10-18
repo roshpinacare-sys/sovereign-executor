@@ -34,6 +34,9 @@ jobs:
         with:
           bun-version: 1.3.14
 
+      - name: Law self-test (leak-law + task-registry drift prove themselves every beat)
+        run: python3 scripts/beat.py --self-test
+
       - name: Beat (read-only fleet tasks + the owner-approved write-path economy-book task)
         env:
           SOVEREIGN_PAT: ${{ secrets.SOVEREIGN_PAT }}

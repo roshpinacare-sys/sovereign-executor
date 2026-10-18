@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.beat-tasks/1",
-  "note": "write-path APPROVED by the owner 2026-10-18, verbatim: 'כן תמשיך מאשר מעולה תמשיך בצע וודא שלא נמחק לי הסנדבוקס אני רואה שהוא עלה מחדש' (zai-web session web-16cb7ad8, trace 1a14dd29d3341489). The economy-book task runs the book repo's OWN unmodified runner (run-economy-beat.mjs) under the repo's own single-writer heartbeat lock — host writer alive = honest SKIP, lock stale = executor adopts. Receipts carry outcome words only; no book content ever lands on this public plane. Adding a task is a data edit.",
+  "note": "write-path APPROVED by the owner 2026-10-18, verbatim: 'כן תמשיך מאשר מעולה תמשיך בצע וודא שלא נמחק לי הסנדבוקס אני רואה שהוא עלה מחדש' (zai-web session web-16cb7ad8, trace 1a14dd29d3341489). REAFFIRMED + EXTENDED the same day (trace 1a14ec60f8b59e49, verbatim: 'תמשיך ודחוף וודא שוב שלא נפל הסנדבוקס וחזק אחורה בבקשה וודא שהאוטונומיה יודעת להשתמש בכלים שעשית והכל ולחזק עוד') — verify the sandbox again, retro-harden what was built, and make the autonomy able to USE the tools. The economy-book task runs the book repo's OWN unmodified runner (run-economy-beat.mjs) under the repo's own single-writer heartbeat lock — host writer alive = honest SKIP, lock stale = executor adopts. Receipts carry outcome words only; no book content ever lands on this public plane. Adding a task is a data edit.",
   "tasks": [
     { "id": "private-census", "repo": "roshpinacare-sys/sovereign-runner-kit" },
     { "id": "yield-snapshot", "repo": "roshpinacare-sys/Autonomy" },
