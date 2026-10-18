@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-18T06:02:07.077807+00:00",
-  "tasks": 2,
+  "at": "2026-10-18T07:18:35.642365+00:00",
+  "tasks": 3,
   "failed": 0,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"key-verify.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"wf\": \"ci.yml\", \"redStreak\": 2}, {\"repo\": \"saos",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 5}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-growth.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 4}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 5}, {\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 2",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -33,7 +33,12 @@
         },
         "logWindow": 66
       }
+    },
+    {
+      "task": "economy-book",
+      "ok": true,
+      "outcome": "skip-lock"
     }
   ],
-  "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo"
+  "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
 }
