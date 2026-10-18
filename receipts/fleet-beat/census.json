@@ -1,5 +1,5 @@
 {
- "capturedAt": "2026-10-18T06:00:09.338653+00:00",
+ "capturedAt": "2026-10-18T06:02:06.667771+00:00",
  "totals": {
   "repos": 44,
   "workflows": 357,
@@ -18,6 +18,11 @@
    "repo": "Autonomy",
    "wf": "artery-decision-truth.yml",
    "redStreak": 3
+  },
+  {
+   "repo": "Autonomy",
+   "wf": "artery-fleet.yml",
+   "redStreak": 1
   },
   {
    "repo": "Autonomy",
@@ -58,11 +63,6 @@
    "repo": "saos-runtime",
    "wf": "escrow-payroll.yml",
    "redStreak": 6
-  },
-  {
-   "repo": "sovereign-executor",
-   "wf": "fleet-beat.yml",
-   "redStreak": 1
   },
   {
    "repo": "p-340a4d0",
@@ -109,7 +109,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-18T05:24:48Z"
+      "at": "2026-10-18T05:58:13Z"
      },
      "redStreak": 0
     },
@@ -127,10 +127,7 @@
      "wf": "artery-defi.yml",
      "state": "active",
      "moneyLane": true,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-18T04:34:31Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -148,10 +145,10 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "running",
+      "conclusion": "failure",
       "at": "2026-10-18T05:57:35Z"
      },
-     "redStreak": 0
+     "redStreak": 1
     },
     {
      "wf": "artery-flow.yml",
@@ -373,7 +370,7 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "running",
+      "conclusion": "success",
       "at": "2026-10-18T05:57:53Z"
      },
      "redStreak": 0
@@ -398,7 +395,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-18T05:24:48Z"
+      "at": "2026-10-18T05:58:14Z"
      },
      "redStreak": 0
     },
@@ -414,7 +411,7 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "running",
+      "conclusion": "success",
       "at": "2026-10-18T05:57:53Z"
      },
      "redStreak": 0
@@ -510,7 +507,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-18T05:52:05Z"
+      "at": "2026-10-18T05:58:14Z"
      },
      "redStreak": 0
     },
@@ -967,10 +964,7 @@
      "wf": "dex-router-cron.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-18T05:06:54Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -1255,7 +1249,10 @@
      "wf": "office3d-guard.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-18T05:58:59Z"
+     },
      "redStreak": 0
     },
     {
@@ -1547,7 +1544,7 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "running",
+      "conclusion": "success",
       "at": "2026-10-18T05:58:17Z"
      },
      "redStreak": 0
@@ -1652,7 +1649,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-18T05:30:01Z"
+      "at": "2026-10-18T06:00:01Z"
      },
      "redStreak": 0
     },
@@ -1661,8 +1658,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "success",
-      "at": "2026-10-18T05:56:31Z"
+      "conclusion": "running",
+      "at": "2026-10-18T06:01:05Z"
      },
      "redStreak": 0
     },
@@ -1691,8 +1688,8 @@
      "state": "active",
      "moneyLane": true,
      "last": {
-      "conclusion": "success",
-      "at": "2026-10-18T05:38:17Z"
+      "conclusion": "running",
+      "at": "2026-10-18T06:01:13Z"
      },
      "redStreak": 0
     },
@@ -1732,7 +1729,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-18T05:36:42Z"
+      "at": "2026-10-18T06:00:00Z"
      },
      "redStreak": 0
     },
@@ -1803,8 +1800,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "success",
-      "at": "2026-10-18T04:49:44Z"
+      "conclusion": "running",
+      "at": "2026-10-18T06:01:14Z"
      },
      "redStreak": 0
     },
@@ -1881,7 +1878,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-18T05:30:02Z"
+      "at": "2026-10-18T06:00:01Z"
      },
      "redStreak": 0
     },
@@ -1910,8 +1907,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "success",
-      "at": "2026-10-18T05:30:32Z"
+      "conclusion": "running",
+      "at": "2026-10-18T06:00:36Z"
      },
      "redStreak": 0
     }
@@ -2338,10 +2335,10 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "failure",
-      "at": "2026-10-18T05:55:33Z"
+      "conclusion": "running",
+      "at": "2026-10-18T06:01:05Z"
      },
-     "redStreak": 1
+     "redStreak": 0
     }
    ]
   },
