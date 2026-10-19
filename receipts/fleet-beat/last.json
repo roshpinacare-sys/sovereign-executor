@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-19T02:20:32.517029+00:00",
+  "at": "2026-10-19T03:17:07.865978+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 7}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"world-evolver.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"office3d-guard.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"wf\": \"gitleaks.yml\", \"redStreak\": 20}, {\"repo\": \"saos-de",
+        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 13}, {\"repo\": \"Domain\", \"wf\": \"office3d-guard.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"wf\": \"gitleaks.yml\", \"redStreak\": 20}, {\"repo\": \"saos-dex\", \"wf\": \"hive-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 8}, {\"repo\": \"p-959c44",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -17,11 +17,11 @@
       "task": "yield-snapshot",
       "ok": true,
       "snapshot": {
-        "verdict": "SELFTEST-GATE-RED",
-        "engineHead": "7dff6d9d6708",
-        "selftest": "UNPARSED",
-        "voterStatus": null,
-        "candidatesScanned": null,
+        "verdict": "INTEL-OK",
+        "engineHead": "00823c936e5c",
+        "selftest": "PASS",
+        "voterStatus": "read-ok",
+        "candidatesScanned": 480,
         "receiptsPerDay": {
           "2026-10-13": 13,
           "2026-10-14": 12,
@@ -29,9 +29,9 @@
           "2026-10-16": 10,
           "2026-10-17": 11,
           "2026-10-18": 11,
-          "2026-10-19": 1
+          "2026-10-19": 3
         },
-        "logWindow": 75
+        "logWindow": 77
       }
     },
     {
