@@ -156,7 +156,10 @@ def self_test():
     1. leak-law: clean() scrubs the credential from any receipt-bound string.
     2. fail-closed clone: a failing clone raises RuntimeError with ZERO credential.
     3. registry drift: every task declared in beat-tasks.json exists in TASKS.
-    4. receipts plane writable (evidence can always land)."""
+    4. receipts plane writable (evidence can always land).
+    5. guard law: the switch-guard's approval file is intact and the guard
+       itself is fail-closed without a credential (wave-19.10 — the guard must
+       never act blind, and its owner-approved scope must never drift)."""
     ok = bad = 0
     def check(name, cond, extra=''):
         nonlocal ok, bad
@@ -195,6 +198,34 @@ def self_test():
         check('receipts-plane-writable', True)
     except Exception as e:
         check('receipts-plane-writable', False, clean(e)[:80])
+    # law 5 (wave-19.10): the guard never acts blind + its scope never drifts.
+    approval_path = os.path.join(ROOT, 'state', 'fleet-actions-guard-approval.json')
+    guard_path = os.path.join(ROOT, 'scripts', 'fleet_actions_guard.py')
+    try:
+        approval = json.load(open(approval_path))
+        approved = (len(approval.get('approvedSet', {}).get('publicNamed', [])),
+                    len(approval.get('approvedSet', {}).get('privatePseudonyms', [])))
+        check('guard-approval-file-intact',
+              approved == (1, 17) and approval.get('ownerApproval', {}).get('trace') == '1a1512554a26f66d',
+              f'approvedSet={approved}')
+    except Exception as e:
+        check('guard-approval-file-intact', False, clean(e)[:80])
+    try:
+        # the guard must refuse to act without a credential: run it with the
+        # env explicitly stripped — no API calls, one FAIL-CLOSED line, exit 1.
+        r = subprocess.run([sys.executable, guard_path],
+                           env={k: v for k, v in os.environ.items() if k != 'SOVEREIGN_PAT'},
+                           capture_output=True, text=True, timeout=60)
+        out = clean(r.stdout or '')
+        # vacuously-clean law (wave-19.5 lesson, re-learned 2026-10-19): with
+        # PAT='' the expression `PAT not in out` is ALWAYS False — credential
+        # absence must read as vacuously clean, not as a leak.
+        credential_clean = (PAT not in out) if PAT else True
+        check('guard-fail-closed-no-credential',
+              r.returncode == 1 and 'FAIL-CLOSED' in out and credential_clean,
+              f'(exit={r.returncode}, out={out[:70]!r})')
+    except Exception as e:
+        check('guard-fail-closed-no-credential', False, clean(e)[:80])
     print(f'beat selftest: {ok} passed, {bad} failed')
     return 1 if bad else 0
 
