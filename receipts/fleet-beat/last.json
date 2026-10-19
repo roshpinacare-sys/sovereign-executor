@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-19T19:38:22.565651+00:00",
+  "at": "2026-10-19T20:35:26.803949+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,8 +8,8 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"saos-dex\", \"wf\": \"hive-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"p-2c31ddb\", \"wf\": \"baseline-integrity.yml\", \"redStreak\": 4}, {\"repo\": \"p-2c31ddb\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"p-2c31ddb\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"p-2c31ddb\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 2}, {\"repo\": \"p-6e4c69a\", \"wf\": \"sovereign-heart.yml\", \"redS",
-        "REPO-ACTIONS-DISABLED: [\"p-2c5b51b\", \"p-7f4f0cf\", \"p-d1e4e20\", \"p-67fc624\", \"p-7346107\", \"p-7bc88eb\"]"
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"hive-probe.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"artery-integrity-twin.yml\", \"redStreak\": 1}, {\"repo\": \"p-2c31ddb\", \"wf\": \"baseline-integrity.yml\", \"redStreak\": 4}, {\"repo\": \"p-2c31ddb\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"p-2c31ddb\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}",
+        "REPO-ACTIONS-DISABLED: [\"p-2c5b51b\"]"
       ],
       "err": ""
     },
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "b2cdcc41219f",
+        "engineHead": "a0de572adb85",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,23 +29,23 @@
           "2026-10-16": 10,
           "2026-10-17": 11,
           "2026-10-18": 11,
-          "2026-10-19": 9
+          "2026-10-19": 10
         },
-        "logWindow": 83
+        "logWindow": 84
       }
     },
     {
       "task": "actions-guard",
       "ok": true,
       "tail": [
-        "actions-guard: scanned=45 alreadyOn=39 reArmed=5 verified=5 outOfScope=1 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: scanned=45 alreadyOn=44 reArmed=0 verified=0 outOfScope=1 failed=0 watcherPulse=coverage-ok"
       ],
       "err": ""
     },
     {
       "task": "economy-book",
       "ok": true,
-      "outcome": "race-lost-fail-closed"
+      "outcome": "skip-lock"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
