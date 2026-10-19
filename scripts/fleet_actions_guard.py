@@ -23,6 +23,12 @@ not be fought by a bot. Laws: GET-verify after every PUT (truth law);
 pseudonymous receipts (privacy law); fail-closed with clean() (leak law);
 this script touches ONLY actions/permissions (no workflows, no secrets,
 no vault — standing prohibitions untouched).
+
+WATCHER-PULSE (wave-19.14): who watches the watchers — a read-only pulse of
+the two dwell-chain keepalive lanes (runner-kit + beacon) appended to the
+receipt each pass. Pure GETs, no dispatches, no touches; the verdict does
+NOT change this script's switch-focused exit code — it is data for the beat
+receipt (wiring it into a red state is a separate, deliberate decision).
 """
 import hashlib
 import json
@@ -34,6 +40,15 @@ import urllib.request
 from datetime import datetime, timezone
 
 ORG = 'roshpinacare-sys'
+# The two dwell-chain watchers (waves 19.11/19.13). Coverage semantics: a
+# live chain always has a run created <=31min ago (its dwell window), so any
+# lane whose newest run is >WATCHER_STALE_MIN old is chain-dead AND
+# lottery-silent — exactly the hole this pulse exists to see.
+WATCHERS = [
+    {'lane': 'runner-kit/beat-keepalive', 'repo': 'sovereign-runner-kit', 'wf': 'keepalive.yml'},
+    {'lane': 'beacon/beat-keepalive', 'repo': 'sovereign-beacon', 'wf': 'keepalive.yml'},
+]
+WATCHER_STALE_MIN = 40
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APPROVAL = os.path.join(ROOT, 'state', 'fleet-actions-guard-approval.json')
 RECEIPT = os.path.join(ROOT, 'receipts', 'fleet-beat', 'actions-guard.json')
@@ -84,6 +99,33 @@ def list_repos():
         if st == 200:
             names = [r['name'] for r in (d or [])]
     return sorted(set(names))
+
+
+def watcher_pulse():
+    """Read-only pulse of the two keepalive lanes (wave-19.14). Pure GETs;
+    any API error is recorded as 'unreachable', never raised — the pulse
+    must not break the switch-guard's own work."""
+    now = datetime.now(timezone.utc)
+    out = []
+    for w in WATCHERS:
+        st, d = api('https://api.github.com/repos/%s/%s/actions/workflows/%s/runs?per_page=1'
+                    % (ORG, w['repo'], w['wf']))
+        if st != 200:
+            out.append({'lane': w['lane'], 'state': 'unreachable-http-%s' % st})
+            continue
+        runs = (d or {}).get('workflow_runs') or []
+        if not runs:
+            out.append({'lane': w['lane'], 'state': 'no-runs-ever'})
+            continue
+        r = runs[0]
+        at = datetime.fromisoformat(r['created_at'].replace('Z', '+00:00'))
+        out.append({'lane': w['lane'], 'run': r.get('run_number'),
+                    'status': r.get('status'), 'conclusion': r.get('conclusion'),
+                    'ageMin': round((now - at).total_seconds() / 60.0)})
+    covered = [w for w in out
+               if isinstance(w.get('ageMin'), int) and w['ageMin'] <= WATCHER_STALE_MIN]
+    verdict = 'coverage-ok' if covered else 'coverage-stale'
+    return {'verdict': verdict, 'thresholdMin': WATCHER_STALE_MIN, 'watchers': out}
 
 
 def main():
@@ -139,6 +181,7 @@ def main():
             verified += 1
         else:
             failed += 1
+    pulse = watcher_pulse()
     receipt = {
         'what': 'hourly actions-guard — verify approved repo-level switches, re-arm any found OFF (owner trace 1a1512554a26f66d)',
         'executedAt': datetime.now(timezone.utc).isoformat(),
@@ -146,11 +189,12 @@ def main():
                     'reArmed': re_armed, 'verified': verified,
                     'outOfScopeReported': out_of_scope, 'failed': failed},
         'results': results,
+        'watcherPulse': pulse,
     }
     os.makedirs(os.path.dirname(RECEIPT), exist_ok=True)
     json.dump(receipt, open(RECEIPT, 'w'), ensure_ascii=False, indent=2)
-    print('actions-guard: scanned=%d alreadyOn=%d reArmed=%d verified=%d outOfScope=%d failed=%d'
-          % (len(repos), already_on, re_armed, verified, out_of_scope, failed))
+    print('actions-guard: scanned=%d alreadyOn=%d reArmed=%d verified=%d outOfScope=%d failed=%d watcherPulse=%s'
+          % (len(repos), already_on, re_armed, verified, out_of_scope, failed, pulse['verdict']))
     return 1 if failed else 0
 
 
