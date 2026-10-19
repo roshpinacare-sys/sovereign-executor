@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-19T12:50:46.285183+00:00",
+  "at": "2026-10-19T13:51:11.836960+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,8 +8,8 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"daily-digest.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 6}, {\"repo\": \"Domain\", \"wf\": \"org-gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-3d.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-ci.yml\", \"redStreak\": 10}, {\"repo\": \"saos-dex\", \"wf\"",
-        "REPO-ACTIONS-DISABLED: []"
+        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-3d.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-ci.yml\", \"redStreak\": 11}, {\"repo\": \"saos-dex\", \"wf\": \"gitleaks.yml\", \"redStreak\": 19}, {\"repo\": \"saos-dex\", \"wf\": \"hive-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"",
+        "REPO-ACTIONS-DISABLED: [\"saos-dex\", \"p-959c444\", \"p-2c31ddb\", \"p-340a4d0\", \"p-7f4f0cf\", \"p-d1e4e20\", \"p-67fc624\", \"p-6e4c69a\", \"p-3bc7334\", \"p-7346107\", \"p-6da1706\", \"p-ded40bb\", \"p-0b07173\", \"p-2698a44\", \"p-780c6b2\", \"p-b696ff4\", \"p-1850070\", \"p-7bc88eb\"]"
       ],
       "err": ""
     },
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "84617456e962",
+        "engineHead": "fa4f80704d02",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,23 +29,23 @@
           "2026-10-16": 10,
           "2026-10-17": 11,
           "2026-10-18": 11,
-          "2026-10-19": 6
+          "2026-10-19": 7
         },
-        "logWindow": 80
+        "logWindow": 81
       }
     },
     {
       "task": "actions-guard",
       "ok": true,
       "tail": [
-        "actions-guard: scanned=45 alreadyOn=45 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: scanned=45 alreadyOn=27 reArmed=18 verified=18 outOfScope=0 failed=0 watcherPulse=coverage-ok"
       ],
       "err": ""
     },
     {
       "task": "economy-book",
       "ok": true,
-      "outcome": "skip-lock"
+      "outcome": "sealed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
