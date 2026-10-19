@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-19T04:14:00.152834+00:00",
+  "at": "2026-10-19T05:10:36.268248+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"dex-mirror.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 8}, {\"repo\": \"saos-dex\", \"wf\": \"gitleaks.yml\", \"redStreak\": 20}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 3}, {\"repo\": \"p-959c444\", \"wf\": \"gitleaks.yml\", \"redStreak\": 3}, {\"repo\": \"p-959c444\", \"wf\": ",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 9}, {\"repo\": \"Domain\", \"wf\": \"office3d-guard.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"wf\": \"gitleaks.yml\", \"redStreak\": 19}, {\"repo\": \"saos-dex\", \"wf\": \"hive-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 2}, {\"repo\": \"p-959c444\", \"wf\": \"gitleaks.yml\", \"redStreak\": 3}, {\"repo\": \"p-959c444\", \"w",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "00823c936e5c",
+        "engineHead": "d435ea64fb3f",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-16": 10,
           "2026-10-17": 11,
           "2026-10-18": 11,
-          "2026-10-19": 3
+          "2026-10-19": 4
         },
-        "logWindow": 77
+        "logWindow": 78
       }
     },
     {
