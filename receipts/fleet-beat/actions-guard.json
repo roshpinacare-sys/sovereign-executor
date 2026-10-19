@@ -1,29 +1,65 @@
 {
   "what": "hourly actions-guard — verify approved repo-level switches, re-arm any found OFF (owner trace 1a1512554a26f66d)",
-  "executedAt": "2026-10-19T18:35:19.449231+00:00",
+  "executedAt": "2026-10-19T19:35:10.019052+00:00",
   "summary": {
     "reposScanned": 45,
-    "alreadyOn": 45,
-    "reArmed": 0,
-    "verified": 0,
-    "outOfScopeReported": 0,
+    "alreadyOn": 39,
+    "reArmed": 5,
+    "verified": 5,
+    "outOfScopeReported": 1,
     "failed": 0
   },
-  "results": [],
+  "results": [
+    {
+      "repo": "p-7f4f0cf",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-67fc624",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-7bc88eb",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-2c5b51b",
+      "state": "out-of-scope-reported",
+      "note": "found OFF, not in the approved set — measured, reported, NOT touched"
+    },
+    {
+      "repo": "p-d1e4e20",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-7346107",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    }
+  ],
   "watcherPulse": {
     "verdict": "coverage-ok",
     "thresholdMin": 40,
     "watchers": [
       {
         "lane": "runner-kit/beat-keepalive",
-        "run": 38,
+        "run": 40,
         "status": "in_progress",
         "conclusion": null,
         "ageMin": 16
       },
       {
         "lane": "beacon/beat-keepalive",
-        "run": 33,
+        "run": 35,
         "status": "in_progress",
         "conclusion": null,
         "ageMin": 7
