@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-19T21:31:49.083455+00:00",
+  "at": "2026-10-19T22:28:34.419869+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"hive-probe.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"artery-integrity-twin.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"org-gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"weave-anchor-ping.yml\", \"redStreak\": 1}, {\"repo\": \"p-2c31ddb\", \"wf\": \"baseline-integrity.yml\", \"redStreak\": 4}, {\"r",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"hive-probe.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"artery-integrity-twin.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"office3d-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"org-gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\", \"wf\": \"hive-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"p",
         "REPO-ACTIONS-DISABLED: [\"p-2c5b51b\"]"
       ],
       "err": ""
