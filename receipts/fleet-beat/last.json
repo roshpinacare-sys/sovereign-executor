@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T00:28:21.649695+00:00",
+  "at": "2026-10-20T01:28:13.437806+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"agents-watch.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"artery-integrity-twin.yml\", \"redStreak\": 2}, {\"repo\": \"saos-dex\", \"wf\": \"hive-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"p-2c31ddb\", \"wf\": \"baseline-integrity.yml\", \"redStreak\": 4}, {\"rep",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 3}, {\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"artery-integrity-twin.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"org-gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"p-2c31ddb\", \"wf\": \"baseline-integrity.yml\", \"redStreak\": 4}, {\"repo\": \"p-2c31ddb\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4},",
         "REPO-ACTIONS-DISABLED: [\"p-2c5b51b\"]"
       ],
       "err": ""
