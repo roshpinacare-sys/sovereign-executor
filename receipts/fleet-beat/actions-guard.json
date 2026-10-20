@@ -1,38 +1,32 @@
 {
   "what": "hourly actions-guard — verify approved repo-level switches, re-arm any found OFF (owner trace 1a1512554a26f66d)",
-  "executedAt": "2026-10-20T05:16:00.561281+00:00",
+  "executedAt": "2026-10-20T06:12:33.237428+00:00",
   "summary": {
     "reposScanned": 45,
-    "alreadyOn": 44,
+    "alreadyOn": 45,
     "reArmed": 0,
     "verified": 0,
-    "outOfScopeReported": 1,
+    "outOfScopeReported": 0,
     "failed": 0
   },
-  "results": [
-    {
-      "repo": "p-2c5b51b",
-      "state": "out-of-scope-reported",
-      "note": "found OFF, not in the approved set — measured, reported, NOT touched"
-    }
-  ],
+  "results": [],
   "watcherPulse": {
     "verdict": "coverage-ok",
     "thresholdMin": 40,
     "watchers": [
       {
         "lane": "runner-kit/beat-keepalive",
-        "run": 58,
+        "run": 59,
         "status": "in_progress",
         "conclusion": null,
-        "ageMin": 7
+        "ageMin": 30
       },
       {
         "lane": "beacon/beat-keepalive",
-        "run": 53,
+        "run": 54,
         "status": "in_progress",
         "conclusion": null,
-        "ageMin": 4
+        "ageMin": 52
       }
     ]
   }

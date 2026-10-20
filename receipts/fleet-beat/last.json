@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T05:16:05.302752+00:00",
+  "at": "2026-10-20T06:12:39.093310+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,8 +8,8 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Adsmarket\", \"wf\": \"claims-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Adsmarket\", \"wf\": \"gitleaks.yml\", \"redStreak\": 4}, {\"repo\": \"Adsmarket\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 2}, {\"repo\": \"anchor-baseline\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-builder.yml\", \"redSt",
-        "REPO-ACTIONS-DISABLED: [\"fleet-economy\"]"
+        "REDBOARD: [{\"repo\": \"Adsmarket\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 2}, {\"repo\": \"anchor-baseline\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-builder.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redSt",
+        "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
     },
@@ -38,7 +38,7 @@
       "task": "actions-guard",
       "ok": true,
       "tail": [
-        "actions-guard: scanned=45 alreadyOn=44 reArmed=0 verified=0 outOfScope=1 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: scanned=45 alreadyOn=45 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
       ],
       "err": ""
     },
