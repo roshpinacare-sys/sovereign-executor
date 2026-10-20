@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T06:12:39.093310+00:00",
+  "at": "2026-10-20T07:09:16.355430+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Adsmarket\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 2}, {\"repo\": \"anchor-baseline\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-builder.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redSt",
+        "REDBOARD: [{\"repo\": \"Adsmarket\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 2}, {\"repo\": \"anchor-baseline\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 1}, {\"repo\": \"Defi\", \"wf\": \"gitleaks.yml\", \"redStr",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
