@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T17:36:56.510406+00:00",
+  "at": "2026-10-20T18:33:46.728499+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 3}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\":",
+        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 4}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 5}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Domain\", \"wf\": \"econ-engine.yml\", \"redStreak\": ",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
