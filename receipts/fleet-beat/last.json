@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T16:39:46.254629+00:00",
+  "at": "2026-10-20T17:36:56.510406+00:00",
   "tasks": 4,
-  "failed": 1,
+  "failed": 0,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"saos-control-center\", \"wf\": \"gitleaks.yml\", \"redStre",
+        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 3}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\":",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "c8a91a4559f8",
+        "engineHead": "7a4c20c1f471",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-17": 11,
           "2026-10-18": 11,
           "2026-10-19": 12,
-          "2026-10-20": 8
+          "2026-10-20": 9
         },
-        "logWindow": 94
+        "logWindow": 95
       }
     },
     {
@@ -44,8 +44,8 @@
     },
     {
       "task": "economy-book",
-      "ok": false,
-      "outcome": "failed"
+      "ok": true,
+      "outcome": "skip-lock"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
