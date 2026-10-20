@@ -1,17 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T03:24:51.340629+00:00",
+  "at": "2026-10-20T04:19:54.758242+00:00",
   "tasks": 4,
-  "failed": 0,
+  "failed": 3,
   "results": [
     {
       "task": "private-census",
-      "ok": true,
-      "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-defi.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 2}, {\"repo\": \"saos-dex\", \"wf\": \"hive-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"p-2c31ddb\", \"wf\": \"baseline-integrity.yml\", \"redStreak\": 4}, {\"repo\": \"p-2c31ddb\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"p-2c31ddb\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"rep",
-        "REPO-ACTIONS-DISABLED: [\"p-2c5b51b\"]"
-      ],
-      "err": ""
+      "ok": false,
+      "tail": [],
+      "err": "r/lib/python3.12/urllib/request.py\", line 492, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/lib/python3.12/urllib/request.py\", line 639, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 401: Unauthorized\n"
     },
     {
       "task": "yield-snapshot",
@@ -36,16 +33,16 @@
     },
     {
       "task": "actions-guard",
-      "ok": true,
+      "ok": false,
       "tail": [
-        "actions-guard: scanned=45 alreadyOn=44 reArmed=0 verified=0 outOfScope=1 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: FAIL-CLOSED — no repos visible; refusing to act blind"
       ],
       "err": ""
     },
     {
       "task": "economy-book",
-      "ok": true,
-      "outcome": "sealed"
+      "ok": false,
+      "error": "remote: Invalid username or token. Password authentication is not supported for Git operations.\nfatal: Authentication failed for 'https://github.com/roshpinacare-sys/fleet-economy.git/'\n"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
