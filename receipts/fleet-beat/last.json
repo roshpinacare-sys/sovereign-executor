@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T07:09:16.355430+00:00",
+  "at": "2026-10-20T08:05:32.829923+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Adsmarket\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 2}, {\"repo\": \"anchor-baseline\", \"wf\": \"conformance-selftest.yml\", \"redStreak\": 4}, {\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 1}, {\"repo\": \"Defi\", \"wf\": \"gitleaks.yml\", \"redStr",
+        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"estate-vault.yml\", \"redStreak\": 1}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Domain\", \"wf\": \"office3d-guard.yml\", \"redStreak\": 2}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"rep",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "8b4a18e049a4",
+        "engineHead": "dea75469377f",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-17": 11,
           "2026-10-18": 11,
           "2026-10-19": 12,
-          "2026-10-20": 2
+          "2026-10-20": 4
         },
-        "logWindow": 88
+        "logWindow": 90
       }
     },
     {
