@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T10:55:30.763546+00:00",
+  "at": "2026-10-20T11:51:48.875100+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"sandbox-private\", \"wf\": \"sovereign-heart.yml\", \"redStreak\": 15}, {\"repo\": \"saos-control-center\", \"wf\": \"gitleaks.yml\", \"red",
+        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-control-center\", \"wf\": \"gitleaks.yml\", \"redStreak\": 3}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redS",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "dea75469377f",
+        "engineHead": "79520bd4df47",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-17": 11,
           "2026-10-18": 11,
           "2026-10-19": 12,
-          "2026-10-20": 4
+          "2026-10-20": 7
         },
-        "logWindow": 90
+        "logWindow": 93
       }
     },
     {
