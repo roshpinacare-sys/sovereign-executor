@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T14:43:01.446741+00:00",
+  "at": "2026-10-20T15:39:54.328706+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Domain\", \"wf\": \"office3d-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"sovereign.yml\", \"redStreak\": 1}, {\"repo\": ",
+        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-control-center\", \"wf\": \"gitleaks.yml\", \"redStreak\": ",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
