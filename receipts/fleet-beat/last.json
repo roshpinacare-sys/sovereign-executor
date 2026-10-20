@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T15:39:54.328706+00:00",
+  "at": "2026-10-20T16:39:46.254629+00:00",
   "tasks": 4,
-  "failed": 0,
+  "failed": 1,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-control-center\", \"wf\": \"gitleaks.yml\", \"redStreak\": ",
+        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"Project-files\", \"wf\": \"archive-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"saos-control-center\", \"wf\": \"gitleaks.yml\", \"redStre",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -38,14 +38,14 @@
       "task": "actions-guard",
       "ok": true,
       "tail": [
-        "actions-guard: scanned=45 alreadyOn=45 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: scanned=46 alreadyOn=46 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
       ],
       "err": ""
     },
     {
       "task": "economy-book",
-      "ok": true,
-      "outcome": "skip-lock"
+      "ok": false,
+      "outcome": "failed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
