@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-20T20:38:29.965664+00:00",
+  "at": "2026-10-20T21:38:24.666254+00:00",
   "tasks": 4,
   "failed": 1,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 7}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 9}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"fleet-economy\", \"wf\": \"economy-beat.yml\", \"redS",
+        "REDBOARD: [{\"repo\": \"anchor-baseline\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 7}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 8}, {\"repo\": \"Defi\", \"wf\": \"workflow-yaml-guard.yml\", \"redStreak\": 29}, {\"repo\": \"fleet-economy\", \"wf\": \"economy-beat.yml\", \"redS",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "7a4c20c1f471",
+        "engineHead": "4f40b31f7f2c",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-17": 11,
           "2026-10-18": 11,
           "2026-10-19": 12,
-          "2026-10-20": 9
+          "2026-10-20": 11
         },
-        "logWindow": 95
+        "logWindow": 97
       }
     },
     {
