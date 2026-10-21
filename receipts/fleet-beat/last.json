@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-21T19:09:06.490186+00:00",
+  "at": "2026-10-21T20:09:39.726069+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"Zip\", \"wf\": \"weave-anchor-lines.yml\", \"redStreak\": 13}, {\"repo\": \"Zip\", \"wf\": \"weave-brain-restore.yml\", \"redStreak\": 6}, {\"repo\": \"Zip\", \"wf\": \"weave-heart.yml\", \"redStreak\": 5}, {\"repo\": \"Z",
+        "REDBOARD: [{\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"Zip\", \"wf\": \"weave-anchor-lines.yml\", \"redStreak\": 13}, {\"repo\": \"Zip\", \"wf\": \"weave-brain-restore.yml\", \"redStreak\": 6}, {\"repo\": \"Zip\", \"wf\": \"weave-heart.yml\", \"redStreak\": 5}, {\"repo\": \"Zip\", \"wf\": \"web-probe.yml\", \"redStreak\": 5}, {\"repo\": \"Zip\", \"w",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -45,7 +45,7 @@
     {
       "task": "economy-book",
       "ok": true,
-      "outcome": "skip-lock"
+      "outcome": "sealed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
