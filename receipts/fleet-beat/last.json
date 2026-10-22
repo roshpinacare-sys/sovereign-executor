@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-22T18:54:41.396372+00:00",
+  "at": "2026-10-22T19:55:45.875104+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-integrity.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 2}, {\"repo\": \"fleet-economy\", \"wf\": \"economy-beat.yml\", \"redStreak\": 4}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-integrity.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"fleet-economy\", \"wf\": \"economy-beat.yml\", \"redStreak\": 4}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
