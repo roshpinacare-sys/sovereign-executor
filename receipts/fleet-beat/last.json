@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-22T02:05:26.480492+00:00",
+  "at": "2026-10-22T03:02:41.816432+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 7}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 6}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"r",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 8}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 7}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 6}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,20 +18,20 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "7a28fddababe",
+        "engineHead": "29964dd3d593",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
         "receiptsPerDay": {
-          "2026-10-15": 14,
           "2026-10-16": 10,
           "2026-10-17": 11,
           "2026-10-18": 11,
           "2026-10-19": 12,
           "2026-10-20": 11,
-          "2026-10-21": 11
+          "2026-10-21": 11,
+          "2026-10-22": 1
         },
-        "logWindow": 108
+        "logWindow": 109
       }
     },
     {
