@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-22T11:47:44.321407+00:00",
+  "at": "2026-10-22T12:48:41.476770+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"profit-oracle.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"token-watchdog.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 7}",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 4}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 4}, {\"repo\": \"Console\", \"wf\": \"swallow-watch.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"swallow-watch.yml\", \"redStreak\": 1}, {\"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -45,7 +45,7 @@
     {
       "task": "economy-book",
       "ok": true,
-      "outcome": "skip-lock"
+      "outcome": "race-lost-fail-closed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
