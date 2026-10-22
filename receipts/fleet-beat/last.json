@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-22T15:51:33.865500+00:00",
+  "at": "2026-10-22T16:52:52.083398+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 3}, {\"repo\": \"fleet-economy\", \"wf\": \"economy-beat.yml\", \"redStreak\": 4}, {\"repo\": \"FleetHQ\", \"wf\": \"office-retro.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbo",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 6}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"fleet-economy\", \"wf\": \"economy-beat.yml\", \"redStreak\": 4}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"trust-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-s",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
