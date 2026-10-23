@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-23T09:07:40.215574+00:00",
+  "at": "2026-10-23T10:07:09.835470+00:00",
   "tasks": 4,
-  "failed": 0,
+  "failed": 1,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"Zip\", \"wf\": \"weave-anchor-lines.yml\", \"redStreak\": 3}, {\"repo\": \"",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"Z",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -44,8 +44,8 @@
     },
     {
       "task": "economy-book",
-      "ok": true,
-      "outcome": "sealed"
+      "ok": false,
+      "outcome": "failed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
