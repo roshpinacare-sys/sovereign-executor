@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-23T04:02:20.858048+00:00",
+  "at": "2026-10-23T05:03:20.386767+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 2}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\"",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 2}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"Zip\", \"wf\": \"weave-anchor-lines.yml\", \"redStreak\": 4}, {\"repo\": ",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
