@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-23T16:21:40.930236+00:00",
+  "at": "2026-10-23T17:22:59.819780+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-grid.yml\", \"redStreak\": 1}, {\"repo\": \"saos-dex\",",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 9}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"steem\", \"wf\": \"gitleaks.yml\", \"redStreak\": 20}, {\"repo\": \"Zip\", \"wf\": \"weave-anchor-lines.yml\", \"redStreak\": 2}, {\"repo\": \"Zip\",",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "2127e7a76ce0",
+        "engineHead": "0558a5b239d4",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-20": 11,
           "2026-10-21": 11,
           "2026-10-22": 9,
-          "2026-10-23": 7
+          "2026-10-23": 8
         },
-        "logWindow": 124
+        "logWindow": 125
       }
     },
     {
@@ -45,7 +45,7 @@
     {
       "task": "economy-book",
       "ok": true,
-      "outcome": "race-lost-fail-closed"
+      "outcome": "sealed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
