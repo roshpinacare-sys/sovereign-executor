@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-24T15:44:51.544151+00:00",
+  "at": "2026-10-24T16:44:17.265759+00:00",
   "tasks": 4,
-  "failed": 0,
+  "failed": 1,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"market-grid-cron.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 20}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"s",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-dex\", \"wf\": \"gitleaks.yml\", \"redStreak\": 6}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 4}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"steem\",",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "b395b6b8a500",
+        "engineHead": "d351bda9ae4c",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-21": 11,
           "2026-10-22": 9,
           "2026-10-23": 11,
-          "2026-10-24": 6
+          "2026-10-24": 7
         },
-        "logWindow": 134
+        "logWindow": 135
       }
     },
     {
@@ -44,8 +44,8 @@
     },
     {
       "task": "economy-book",
-      "ok": true,
-      "outcome": "race-lost-fail-closed"
+      "ok": false,
+      "outcome": "failed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
