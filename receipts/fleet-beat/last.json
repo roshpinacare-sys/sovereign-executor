@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-24T16:51:00.311913+00:00",
+  "at": "2026-10-24T17:52:11.444188+00:00",
   "tasks": 4,
-  "failed": 1,
+  "failed": 0,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 5}, {\"repo\": \"saos-runtime\", \"wf\": \"escrow-payroll.yml\", \"redStreak\": 1}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\"",
+        "REDBOARD: [{\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"trust-heartbeat.yml\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-dex\", \"wf\": \"gitleaks.yml\", \"redStreak\": 15}, {\"repo\": \"saos-dex\", \"wf\": \"selftest.yml\", \"redStreak\": 2}, {\"repo\": \"saos-runtime\", \"wf\": \"escrow-payroll.yml\", \"redStreak\": 3}, {\"repo\": \"saos-sovere",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -44,8 +44,8 @@
     },
     {
       "task": "economy-book",
-      "ok": false,
-      "outcome": "failed"
+      "ok": true,
+      "outcome": "race-lost-fail-closed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
