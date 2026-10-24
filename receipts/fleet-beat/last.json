@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-24T21:56:06.094580+00:00",
+  "at": "2026-10-24T22:57:12.299457+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 5}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"hive-beat-t21.yml\", \"redStreak\": 1}, {\"repo\": \"fleet-econo",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 5}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 7}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"hive-beat-t21.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"saos-act.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": ",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -29,9 +29,9 @@
           "2026-10-21": 11,
           "2026-10-22": 9,
           "2026-10-23": 11,
-          "2026-10-24": 9
+          "2026-10-24": 10
         },
-        "logWindow": 137
+        "logWindow": 138
       }
     },
     {
