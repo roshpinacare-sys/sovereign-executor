@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-26T13:43:57.747261+00:00",
+  "at": "2026-10-26T14:45:01.203738+00:00",
   "tasks": 4,
-  "failed": 1,
+  "failed": 0,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 7}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"hive-beat-t21.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"w",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"directive-bus.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 6}, {\"repo\": \"Domain\", \"wf\": \"hive-beat-t21.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-3d.yml\", \"redStreak\": 1}, {\"rep",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -44,8 +44,8 @@
     },
     {
       "task": "economy-book",
-      "ok": false,
-      "outcome": "failed"
+      "ok": true,
+      "outcome": "race-lost-fail-closed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
