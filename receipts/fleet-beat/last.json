@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-26T18:49:38.152883+00:00",
+  "at": "2026-10-26T19:50:47.151617+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 4}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 6}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 4}, {\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 7}, {\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 3}, {\"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -17,11 +17,11 @@
       "task": "yield-snapshot",
       "ok": true,
       "snapshot": {
-        "verdict": "SELFTEST-GATE-RED",
-        "engineHead": "31bf0e5c44cd",
-        "selftest": "UNPARSED",
-        "voterStatus": null,
-        "candidatesScanned": null,
+        "verdict": "INTEL-OK",
+        "engineHead": "5bbe383080f3",
+        "selftest": "PASS",
+        "voterStatus": "read-ok",
+        "candidatesScanned": 480,
         "receiptsPerDay": {
           "2026-10-20": 11,
           "2026-10-21": 11,
@@ -29,9 +29,9 @@
           "2026-10-23": 11,
           "2026-10-24": 10,
           "2026-10-25": 11,
-          "2026-10-26": 7
+          "2026-10-26": 8
         },
-        "logWindow": 156
+        "logWindow": 157
       }
     },
     {
