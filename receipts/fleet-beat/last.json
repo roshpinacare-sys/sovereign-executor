@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-26T22:54:31.213490+00:00",
+  "at": "2026-10-26T23:55:17.950691+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 8}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 2}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 4}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 1}, {\"repo\": ",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 6}, {\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 2}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 4}, {\"repo\": \"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "524871b80db0",
+        "engineHead": "e7c79b3e0580",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-23": 11,
           "2026-10-24": 10,
           "2026-10-25": 11,
-          "2026-10-26": 9
+          "2026-10-26": 11
         },
-        "logWindow": 158
+        "logWindow": 160
       }
     },
     {
