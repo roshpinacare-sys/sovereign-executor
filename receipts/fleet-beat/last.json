@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-26T16:47:19.712032+00:00",
+  "at": "2026-10-26T17:48:23.140225+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 5}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"r",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 3}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 5}, {\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"fleet-e",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -45,7 +45,7 @@
     {
       "task": "economy-book",
       "ok": true,
-      "outcome": "race-lost-fail-closed"
+      "outcome": "sealed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
