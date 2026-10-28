@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-28T02:35:32.611027+00:00",
+  "at": "2026-10-28T03:34:27.754475+00:00",
   "tasks": 4,
-  "failed": 0,
+  "failed": 1,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 8}, {\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 12}, {\"repo\": \"giant\", \"wf\": \"architect-daemon.yml\", \"redStreak\": 5}, {\"repo\": ",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 7}, {\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 3}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 12}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 2}, {\"repo\": \"g",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -44,8 +44,8 @@
     },
     {
       "task": "economy-book",
-      "ok": true,
-      "outcome": "sealed"
+      "ok": false,
+      "outcome": "failed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
