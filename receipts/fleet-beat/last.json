@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-28T03:34:27.754475+00:00",
+  "at": "2026-10-28T04:33:58.393058+00:00",
   "tasks": 4,
   "failed": 1,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 7}, {\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 3}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 12}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 2}, {\"repo\": \"g",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 2}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 12}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 3}, {\"repo\": \"giant\", \"wf\": \"architect-daemon.yml\", \"redStreak\": 5}, {\"repo\": \"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
