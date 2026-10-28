@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-28T04:33:58.393058+00:00",
+  "at": "2026-10-28T05:34:53.616309+00:00",
   "tasks": 4,
-  "failed": 1,
+  "failed": 0,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"estate-scrub.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 3}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 2}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 12}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 3}, {\"repo\": \"giant\", \"wf\": \"architect-daemon.yml\", \"redStreak\": 5}, {\"repo\": \"",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 5}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 2}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 2}, {\"repo\": \"fleet-economy\", \"wf\": \"receipts-guard.yml\", \"redStreak\": 12}, {\"repo\": \"FleetHQ\", \"wf\": \"fresh-oracle.yml\", \"redStreak\": 3}, {\"repo\": \"giant\", \"wf\": \"architect-daemon.yml\", \"redStreak\": 6}, {\"repo\":",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "b14547e74774",
+        "engineHead": "4edff81c604b",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-25": 11,
           "2026-10-26": 11,
           "2026-10-27": 8,
-          "2026-10-28": 2
+          "2026-10-28": 3
         },
-        "logWindow": 170
+        "logWindow": 171
       }
     },
     {
@@ -44,8 +44,8 @@
     },
     {
       "task": "economy-book",
-      "ok": false,
-      "outcome": "failed"
+      "ok": true,
+      "outcome": "sealed"
     }
   ],
   "secretSurface": "SOVEREIGN_PAT used in-memory only; never printed, never committed; no pull_request triggers exist in this repo; PAT scrubbed from every error string (clean law)"
