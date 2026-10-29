@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-10-29T15:26:38.338326+00:00",
+  "at": "2026-10-29T16:27:55.413031+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 6}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"redStreak\": 6}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"treasury-route.yml\", \"redStreak\": 1}, {",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 5}, {\"repo\": \"Autonomy\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 2}, {\"repo\": \"Autonomy\", \"wf\": \"artery-participation.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"value-scan.yml\", \"re",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "c3348ce1d583",
+        "engineHead": "f00aec595ba2",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,9 +29,9 @@
           "2026-10-26": 11,
           "2026-10-27": 8,
           "2026-10-28": 10,
-          "2026-10-29": 6
+          "2026-10-29": 7
         },
-        "logWindow": 184
+        "logWindow": 185
       }
     },
     {
