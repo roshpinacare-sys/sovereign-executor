@@ -1,12 +1,12 @@
 {
- "capturedAt": "2026-10-31T17:38:08.797989+00:00",
+ "capturedAt": "2026-10-31T18:39:31.229110+00:00",
  "totals": {
   "repos": 49,
   "workflows": 396,
   "active": 396,
   "disabled": 0,
   "moneyLanes": 79,
-  "activeRed": 15,
+  "activeRed": 18,
   "privateRepos": 9,
   "repoActionsDisabled": 0
  },
@@ -14,6 +14,11 @@
  "repoActionsDisabled": [],
  "privateReposNote": "private repos measured under stable pseudonyms p-<hash7>; the alias map is owner-side only",
  "redboard": [
+  {
+   "repo": "Autonomy",
+   "wf": "artery-autotrade-hedge-gate.yml",
+   "redStreak": 1
+  },
   {
    "repo": "Autonomy",
    "wf": "artery-decision-truth.yml",
@@ -27,12 +32,17 @@
   {
    "repo": "Autonomy",
    "wf": "artery-participation.yml",
-   "redStreak": 1
+   "redStreak": 3
+  },
+  {
+   "repo": "Autonomy",
+   "wf": "fleet-yield.yml",
+   "redStreak": 2
   },
   {
    "repo": "Autonomy",
    "wf": "value-scan.yml",
-   "redStreak": 8
+   "redStreak": 6
   },
   {
    "repo": "FleetHQ",
@@ -65,9 +75,14 @@
    "redStreak": 3
   },
   {
+   "repo": "Sandbox",
+   "wf": "value-scan.yml",
+   "redStreak": 1
+  },
+  {
    "repo": "saos-dex",
    "wf": "selftest.yml",
-   "redStreak": 19
+   "redStreak": 20
   },
   {
    "repo": "saos-sovereign-foundry",
@@ -153,7 +168,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:34:48Z"
+      "at": "2026-10-31T18:28:35Z"
      },
      "redStreak": 0
     }
@@ -219,10 +234,7 @@
      "wf": "agent-9-clock-guard.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T15:46:33Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -244,10 +256,10 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T15:51:35Z"
+      "conclusion": "failure",
+      "at": "2026-10-31T18:12:48Z"
      },
-     "redStreak": 0
+     "redStreak": 1
     },
     {
      "wf": "artery-builder.yml",
@@ -255,7 +267,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:14:12Z"
+      "at": "2026-10-31T17:47:36Z"
      },
      "redStreak": 0
     },
@@ -265,7 +277,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:17:13Z"
+      "at": "2026-10-31T18:32:31Z"
      },
      "redStreak": 0
     },
@@ -275,7 +287,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "failure",
-      "at": "2026-10-31T17:33:48Z"
+      "at": "2026-10-31T18:26:58Z"
      },
      "redStreak": 5
     },
@@ -285,7 +297,7 @@
      "moneyLane": true,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:01:13Z"
+      "at": "2026-10-31T18:12:49Z"
      },
      "redStreak": 0
     },
@@ -293,10 +305,7 @@
      "wf": "artery-desk.yml",
      "state": "active",
      "moneyLane": true,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T16:45:01Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -305,7 +314,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:15:48Z"
+      "at": "2026-10-31T18:12:50Z"
      },
      "redStreak": 0
     },
@@ -315,7 +324,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "failure",
-      "at": "2026-10-31T17:33:50Z"
+      "at": "2026-10-31T18:27:00Z"
      },
      "redStreak": 5
     },
@@ -325,7 +334,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:15:50Z"
+      "at": "2026-10-31T18:12:51Z"
      },
      "redStreak": 0
     },
@@ -335,7 +344,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:33:46Z"
+      "at": "2026-10-31T18:26:55Z"
      },
      "redStreak": 0
     },
@@ -365,7 +374,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:33:34Z"
+      "at": "2026-10-31T18:26:43Z"
      },
      "redStreak": 0
     },
@@ -375,9 +384,9 @@
      "moneyLane": false,
      "last": {
       "conclusion": "failure",
-      "at": "2026-10-31T17:14:04Z"
+      "at": "2026-10-31T18:00:48Z"
      },
-     "redStreak": 1
+     "redStreak": 3
     },
     {
      "wf": "artery-scout.yml",
@@ -385,7 +394,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:14:05Z"
+      "at": "2026-10-31T18:37:36Z"
      },
      "redStreak": 0
     },
@@ -393,7 +402,10 @@
      "wf": "artery-scribe.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:43:12Z"
+     },
      "redStreak": 0
     },
     {
@@ -402,7 +414,7 @@
      "moneyLane": true,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:07:16Z"
+      "at": "2026-10-31T18:00:28Z"
      },
      "redStreak": 0
     },
@@ -422,7 +434,7 @@
      "moneyLane": true,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T15:46:39Z"
+      "at": "2026-10-31T18:36:58Z"
      },
      "redStreak": 0
     },
@@ -442,7 +454,7 @@
      "moneyLane": true,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:07:18Z"
+      "at": "2026-10-31T18:26:59Z"
      },
      "redStreak": 0
     },
@@ -451,8 +463,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T17:07:26Z"
+      "conclusion": "running",
+      "at": "2026-10-31T18:32:40Z"
      },
      "redStreak": 0
     },
@@ -469,7 +481,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:29:18Z"
+      "at": "2026-10-31T17:48:29Z"
      },
      "redStreak": 0
     },
@@ -479,7 +491,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:35:14Z"
+      "at": "2026-10-31T17:47:01Z"
      },
      "redStreak": 0
     },
@@ -487,10 +499,7 @@
      "wf": "directive-bus.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T16:16:35Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -527,7 +536,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:07:28Z"
+      "at": "2026-10-31T18:11:00Z"
      },
      "redStreak": 0
     },
@@ -537,7 +546,7 @@
      "moneyLane": true,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:07:30Z"
+      "at": "2026-10-31T18:10:57Z"
      },
      "redStreak": 0
     },
@@ -545,8 +554,11 @@
      "wf": "fleet-yield.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
-     "redStreak": 0
+     "last": {
+      "conclusion": "failure",
+      "at": "2026-10-31T18:29:09Z"
+     },
+     "redStreak": 2
     },
     {
      "wf": "floating-builds.yml",
@@ -554,7 +566,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:16:52Z"
+      "at": "2026-10-31T18:32:14Z"
      },
      "redStreak": 0
     },
@@ -578,7 +590,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:17:13Z"
+      "at": "2026-10-31T18:32:31Z"
      },
      "redStreak": 0
     },
@@ -602,7 +614,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:16:52Z"
+      "at": "2026-10-31T18:14:28Z"
      },
      "redStreak": 0
     },
@@ -659,7 +671,10 @@
      "wf": "selfhood.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "cancelled",
+      "at": "2026-10-31T17:57:38Z"
+     },
      "redStreak": 0
     },
     {
@@ -682,7 +697,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:30:10Z"
+      "at": "2026-10-31T18:26:56Z"
      },
      "redStreak": 0
     },
@@ -692,7 +707,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:17:21Z"
+      "at": "2026-10-31T18:32:39Z"
      },
      "redStreak": 0
     },
@@ -709,9 +724,9 @@
      "moneyLane": false,
      "last": {
       "conclusion": "failure",
-      "at": "2026-10-31T17:33:45Z"
+      "at": "2026-10-31T18:26:54Z"
      },
-     "redStreak": 8
+     "redStreak": 6
     },
     {
      "wf": "verifier.yml",
@@ -719,7 +734,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:35:41Z"
+      "at": "2026-10-31T18:34:50Z"
      },
      "redStreak": 0
     },
@@ -727,7 +742,10 @@
      "wf": "world-evolver.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T18:33:44Z"
+     },
      "redStreak": 0
     }
    ]
@@ -781,7 +799,10 @@
      "wf": "estate-scrub.yml",
      "state": "active",
      "moneyLane": true,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:56:25Z"
+     },
      "redStreak": 0
     },
     {
@@ -797,7 +818,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:28:43Z"
+      "at": "2026-10-31T17:40:57Z"
      },
      "redStreak": 0
     },
@@ -824,7 +845,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:31:41Z"
+      "at": "2026-10-31T18:29:24Z"
      },
      "redStreak": 0
     },
@@ -846,7 +867,10 @@
      "wf": "line-agreement.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T18:37:45Z"
+     },
      "redStreak": 0
     },
     {
@@ -862,7 +886,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:31:41Z"
+      "at": "2026-10-31T18:29:24Z"
      },
      "redStreak": 0
     },
@@ -886,7 +910,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:33:14Z"
+      "at": "2026-10-31T18:31:09Z"
      },
      "redStreak": 0
     },
@@ -920,7 +944,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:31:56Z"
+      "at": "2026-10-31T18:29:47Z"
      },
      "redStreak": 0
     },
@@ -928,7 +952,10 @@
      "wf": "weave-census.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T18:25:42Z"
+     },
      "redStreak": 0
     },
     {
@@ -1013,7 +1040,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:34:57Z"
+      "at": "2026-10-31T18:15:32Z"
      },
      "redStreak": 0
     },
@@ -1035,7 +1062,10 @@
      "wf": "arb-mesh-cron.yml",
      "state": "active",
      "moneyLane": true,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:43:08Z"
+     },
      "redStreak": 0
     },
     {
@@ -1044,7 +1074,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:01:12Z"
+      "at": "2026-10-31T18:36:58Z"
      },
      "redStreak": 0
     },
@@ -1059,10 +1089,7 @@
      "wf": "autonomy-guardian.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T15:48:13Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -1071,7 +1098,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:14:43Z"
+      "at": "2026-10-31T17:47:53Z"
      },
      "redStreak": 0
     },
@@ -1121,10 +1148,7 @@
      "wf": "cloud-pulse.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T16:30:27Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -1183,7 +1207,10 @@
      "wf": "dex-activation.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:56:17Z"
+     },
      "redStreak": 0
     },
     {
@@ -1191,8 +1218,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "cancelled",
-      "at": "2026-10-31T15:51:48Z"
+      "conclusion": "success",
+      "at": "2026-10-31T17:42:35Z"
      },
      "redStreak": 0
     },
@@ -1202,7 +1229,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T15:46:47Z"
+      "at": "2026-10-31T17:43:09Z"
      },
      "redStreak": 0
     },
@@ -1212,7 +1239,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:31:20Z"
+      "at": "2026-10-31T18:29:03Z"
      },
      "redStreak": 0
     },
@@ -1221,8 +1248,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "skipped",
-      "at": "2026-10-31T16:06:08Z"
+      "conclusion": "success",
+      "at": "2026-10-31T17:43:06Z"
      },
      "redStreak": 0
     },
@@ -1240,14 +1267,20 @@
      "wf": "dex-watchdog.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T18:23:06Z"
+     },
      "redStreak": 0
     },
     {
      "wf": "dex-xc-cron.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T18:27:55Z"
+     },
      "redStreak": 0
     },
     {
@@ -1311,7 +1344,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:14:43Z"
+      "at": "2026-10-31T18:35:28Z"
      },
      "redStreak": 0
     },
@@ -1331,7 +1364,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:15:51Z"
+      "at": "2026-10-31T18:27:10Z"
      },
      "redStreak": 0
     },
@@ -1375,7 +1408,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:27:11Z"
+      "at": "2026-10-31T18:25:56Z"
      },
      "redStreak": 0
     },
@@ -1402,7 +1435,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:15:52Z"
+      "at": "2026-10-31T18:27:11Z"
      },
      "redStreak": 0
     },
@@ -1410,10 +1443,7 @@
      "wf": "human-cadence.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T16:30:29Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -1421,8 +1451,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "skipped",
-      "at": "2026-10-31T17:14:34Z"
+      "conclusion": "success",
+      "at": "2026-10-31T18:35:28Z"
      },
      "redStreak": 0
     },
@@ -1484,7 +1514,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:30:00Z"
+      "at": "2026-10-31T18:26:26Z"
      },
      "redStreak": 0
     },
@@ -1494,7 +1524,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:50:31Z"
+      "at": "2026-10-31T18:27:49Z"
      },
      "redStreak": 0
     },
@@ -1521,7 +1551,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T15:44:05Z"
+      "at": "2026-10-31T18:37:37Z"
      },
      "redStreak": 0
     },
@@ -1541,7 +1571,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:21:23Z"
+      "at": "2026-10-31T18:01:33Z"
      },
      "redStreak": 0
     },
@@ -1551,7 +1581,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:34:19Z"
+      "at": "2026-10-31T18:36:16Z"
      },
      "redStreak": 0
     },
@@ -1589,7 +1619,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:14:42Z"
+      "at": "2026-10-31T18:35:28Z"
      },
      "redStreak": 0
     },
@@ -1599,7 +1629,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T15:47:09Z"
+      "at": "2026-10-31T17:43:36Z"
      },
      "redStreak": 0
     },
@@ -1617,7 +1647,10 @@
      "wf": "press-bake.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:42:28Z"
+     },
      "redStreak": 0
     },
     {
@@ -1645,10 +1678,7 @@
      "wf": "public-pulse.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T16:30:30Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -1662,7 +1692,10 @@
      "wf": "pulse-bake.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:43:11Z"
+     },
      "redStreak": 0
     },
     {
@@ -1683,7 +1716,10 @@
      "wf": "saos-act.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T18:28:01Z"
+     },
      "redStreak": 0
     },
     {
@@ -1706,7 +1742,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:14:42Z"
+      "at": "2026-10-31T17:47:53Z"
      },
      "redStreak": 0
     },
@@ -1735,10 +1771,7 @@
      "wf": "sovereign-pulse.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T16:30:32Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -1764,7 +1797,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:06:08Z"
+      "at": "2026-10-31T17:43:23Z"
      },
      "redStreak": 0
     },
@@ -1779,10 +1812,7 @@
      "wf": "swallow-watch.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T15:51:41Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -1903,7 +1933,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T15:29:20Z"
+      "at": "2026-10-31T18:08:00Z"
      },
      "redStreak": 0
     },
@@ -2025,7 +2055,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:34:37Z"
+      "at": "2026-10-31T17:46:57Z"
      },
      "redStreak": 0
     },
@@ -2035,7 +2065,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:37:03Z"
+      "at": "2026-10-31T17:49:05Z"
      },
      "redStreak": 0
     },
@@ -2045,7 +2075,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:37:03Z"
+      "at": "2026-10-31T17:49:05Z"
      },
      "redStreak": 0
     },
@@ -2090,7 +2120,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T13:57:49Z"
+      "at": "2026-10-31T18:07:49Z"
      },
      "redStreak": 0
     }
@@ -2156,7 +2186,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:30:03Z"
+      "at": "2026-10-31T18:30:02Z"
      },
      "redStreak": 0
     },
@@ -2321,7 +2351,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:23:14Z"
+      "at": "2026-10-31T18:17:00Z"
      },
      "redStreak": 0
     },
@@ -2331,7 +2361,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:23:17Z"
+      "at": "2026-10-31T18:17:03Z"
      },
      "redStreak": 0
     },
@@ -2361,7 +2391,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "failure",
-      "at": "2026-10-31T17:10:00Z"
+      "at": "2026-10-31T18:03:04Z"
      },
      "redStreak": 5
     },
@@ -2371,7 +2401,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "failure",
-      "at": "2026-10-31T16:16:48Z"
+      "at": "2026-10-31T17:49:49Z"
      },
      "redStreak": 3
     },
@@ -2381,7 +2411,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:43:25Z"
+      "at": "2026-10-31T18:17:02Z"
      },
      "redStreak": 0
     },
@@ -2411,7 +2441,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:36:18Z"
+      "at": "2026-10-31T18:30:04Z"
      },
      "redStreak": 0
     },
@@ -2435,7 +2465,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:56:41Z"
+      "at": "2026-10-31T17:49:49Z"
      },
      "redStreak": 0
     },
@@ -2445,7 +2475,7 @@
      "moneyLane": true,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:56:40Z"
+      "at": "2026-10-31T17:49:48Z"
      },
      "redStreak": 0
     },
@@ -2549,7 +2579,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:30:32Z"
+      "at": "2026-10-31T18:27:24Z"
      },
      "redStreak": 0
     },
@@ -2559,7 +2589,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:23:37Z"
+      "at": "2026-10-31T18:17:20Z"
      },
      "redStreak": 0
     },
@@ -2582,10 +2612,10 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T16:56:43Z"
+      "conclusion": "failure",
+      "at": "2026-10-31T17:49:50Z"
      },
-     "redStreak": 0
+     "redStreak": 1
     },
     {
      "wf": "verifier.yml",
@@ -2711,7 +2741,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:31:42Z"
+      "at": "2026-10-31T18:29:26Z"
      },
      "redStreak": 0
     },
@@ -2746,10 +2776,7 @@
      "wf": "external-profit-publish.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T13:04:43Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -2758,7 +2785,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:31:42Z"
+      "at": "2026-10-31T18:29:26Z"
      },
      "redStreak": 0
     },
@@ -2785,7 +2812,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "skipped",
-      "at": "2026-10-31T17:31:42Z"
+      "at": "2026-10-31T18:29:26Z"
      },
      "redStreak": 0
     },
@@ -2823,9 +2850,9 @@
      "moneyLane": false,
      "last": {
       "conclusion": "failure",
-      "at": "2026-10-31T17:31:42Z"
+      "at": "2026-10-31T18:29:26Z"
      },
-     "redStreak": 19
+     "redStreak": 20
     },
     {
      "wf": "workflow-yaml-guard.yml",
@@ -2833,7 +2860,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T17:31:42Z"
+      "at": "2026-10-31T18:29:26Z"
      },
      "redStreak": 0
     }
@@ -2938,7 +2965,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:33:17Z"
+      "at": "2026-10-31T18:30:25Z"
      },
      "redStreak": 0
     },
@@ -2953,10 +2980,7 @@
      "wf": "blurt-revival.yml",
      "state": "active",
      "moneyLane": true,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T13:44:35Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -2989,7 +3013,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T16:54:31Z"
+      "at": "2026-10-31T17:54:31Z"
      },
      "redStreak": 0
     },
@@ -3021,7 +3045,10 @@
      "wf": "fleet-fuel.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:50:13Z"
+     },
      "redStreak": 0
     },
     {
@@ -3050,8 +3077,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "running",
-      "at": "2026-10-31T17:37:23Z"
+      "conclusion": "success",
+      "at": "2026-10-31T18:10:23Z"
      },
      "redStreak": 0
     },
@@ -3121,7 +3148,10 @@
      "wf": "organ-pacemaker.yml",
      "state": "active",
      "moneyLane": false,
-     "last": null,
+     "last": {
+      "conclusion": "success",
+      "at": "2026-10-31T17:49:57Z"
+     },
      "redStreak": 0
     },
     {
@@ -3142,10 +3172,7 @@
      "wf": "self-memory.yml",
      "state": "active",
      "moneyLane": false,
-     "last": {
-      "conclusion": "success",
-      "at": "2026-10-31T13:00:23Z"
-     },
+     "last": null,
      "redStreak": 0
     },
     {
@@ -3188,7 +3215,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:34:55Z"
+      "at": "2026-10-31T18:35:34Z"
      },
      "redStreak": 0
     },
@@ -3304,7 +3331,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-30T18:49:49Z"
+      "at": "2026-10-31T17:55:36Z"
      },
      "redStreak": 0
     },
@@ -3438,7 +3465,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:22:50Z"
+      "at": "2026-10-31T17:55:18Z"
      },
      "redStreak": 0
     },
@@ -3464,7 +3491,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T16:41:48Z"
+      "at": "2026-10-31T18:38:26Z"
      },
      "redStreak": 0
     }
@@ -3483,7 +3510,7 @@
      "moneyLane": true,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:49:13Z"
+      "at": "2026-10-31T17:42:50Z"
      },
      "redStreak": 0
     },
@@ -3493,7 +3520,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T16:34:41Z"
+      "at": "2026-10-31T17:47:02Z"
      },
      "redStreak": 0
     },
@@ -3559,7 +3586,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "success",
-      "at": "2026-10-31T12:24:07Z"
+      "at": "2026-10-31T18:32:50Z"
      },
      "redStreak": 0
     },
@@ -3579,7 +3606,7 @@
      "moneyLane": false,
      "last": {
       "conclusion": "running",
-      "at": "2026-10-31T17:08:42Z"
+      "at": "2026-10-31T18:34:01Z"
      },
      "redStreak": 0
     },
@@ -3763,8 +3790,8 @@
      "state": "active",
      "moneyLane": false,
      "last": {
-      "conclusion": "skipped",
-      "at": "2026-10-31T17:20:20Z"
+      "conclusion": "success",
+      "at": "2026-10-31T18:39:02Z"
      },
      "redStreak": 0
     },
