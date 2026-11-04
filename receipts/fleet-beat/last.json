@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-04T20:43:14.793375+00:00",
+  "at": "2026-11-04T21:44:17.708224+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"bridge-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"economy-engine.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 5}, {\"repo\": \"Domain\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"ladder-refresh.yml\", \"redStreak\": 1}, {\"repo\": \"FleetH",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"bridge-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"exposure-gate.yml\", \"redStreak\": 5}, {\"repo\": \"Domain\", \"wf\": \"office-orders-twin.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"key-census-relay-v2.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
