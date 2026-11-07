@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-07T02:11:11.744998+00:00",
+  "at": "2026-11-07T03:12:09.180142+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,8 +8,8 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"economy-engine.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"key-census-relay-v2.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 2}, {\"repo\": \"saos",
-        "REPO-ACTIONS-DISABLED: []"
+        "REDBOARD: [{\"repo\": \"FleetHQ\", \"wf\": \"key-census-relay-v2.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-catchup.yml\", \"redStreak\": 1}, {\"repo\": \"Sandbox\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 2}, {\"repo\": \"sao",
+        "REPO-ACTIONS-DISABLED: [\"Adsmarket\", \"anchor-baseline\", \"Defi\", \"Project-files\", \"roshpina\", \"Sandbox\", \"sandbox-private\", \"saos-agents\", \"saos-control-center\", \"saos-dex\", \"saos-jummper\", \"saos-sovereign-foundry\", \"saos-sovereign-platform\", \"Saosmartwallet\", \"Sdk\", \"TruthRail\", \"Zip\", \"p-b696ff4\"]"
       ],
       "err": ""
     },
@@ -38,7 +38,7 @@
       "task": "actions-guard",
       "ok": true,
       "tail": [
-        "actions-guard: scanned=50 alreadyOn=50 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: scanned=50 alreadyOn=32 reArmed=18 verified=18 outOfScope=0 failed=0 watcherPulse=coverage-ok"
       ],
       "err": ""
     },

@@ -1,29 +1,138 @@
 {
   "what": "hourly actions-guard — verify approved repo-level switches, re-arm any found OFF (owner trace 1a1512554a26f66d)",
-  "executedAt": "2026-11-07T02:07:01.420696+00:00",
+  "executedAt": "2026-11-07T03:07:42.265994+00:00",
   "summary": {
     "reposScanned": 50,
-    "alreadyOn": 50,
-    "reArmed": 0,
-    "verified": 0,
+    "alreadyOn": 32,
+    "reArmed": 18,
+    "verified": 18,
     "outOfScopeReported": 0,
     "failed": 0
   },
-  "results": [],
+  "results": [
+    {
+      "repo": "p-959c444",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-340a4d0",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-7f4f0cf",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-67fc624",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-2698a44",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-780c6b2",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-b696ff4",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-1850070",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-7bc88eb",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-2c31ddb",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-d1e4e20",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-6e4c69a",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-3bc7334",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-7346107",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-f1bf631",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-6da1706",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-ded40bb",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    },
+    {
+      "repo": "p-0b07173",
+      "state": "re-armed",
+      "put": 204,
+      "get": 200
+    }
+  ],
   "watcherPulse": {
     "verdict": "coverage-ok",
     "thresholdMin": 40,
     "watchers": [
       {
         "lane": "runner-kit/beat-keepalive",
-        "run": 904,
+        "run": 906,
         "status": "in_progress",
         "conclusion": null,
         "ageMin": 4
       },
       {
         "lane": "beacon/beat-keepalive",
-        "run": 900,
+        "run": 902,
         "status": "in_progress",
         "conclusion": null,
         "ageMin": 22
