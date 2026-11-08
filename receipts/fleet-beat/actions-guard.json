@@ -1,6 +1,6 @@
 {
   "what": "hourly actions-guard — verify approved repo-level switches, re-arm any found OFF (owner trace 1a1512554a26f66d)",
-  "executedAt": "2026-11-08T22:02:59.298842+00:00",
+  "executedAt": "2026-11-08T23:03:53.247424+00:00",
   "summary": {
     "reposScanned": 50,
     "alreadyOn": 50,
@@ -16,14 +16,14 @@
     "watchers": [
       {
         "lane": "runner-kit/beat-keepalive",
-        "run": 990,
+        "run": 992,
         "status": "in_progress",
         "conclusion": null,
-        "ageMin": 26
+        "ageMin": 25
       },
       {
         "lane": "beacon/beat-keepalive",
-        "run": 987,
+        "run": 989,
         "status": "in_progress",
         "conclusion": null,
         "ageMin": 10
