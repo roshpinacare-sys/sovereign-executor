@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-08T08:48:41.347278+00:00",
+  "at": "2026-11-08T09:50:10.514982+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"selfhood.yml\", \"redStreak\": 2}, {\"repo\": \"FleetHQ\", \"wf\": \"key-census-relay-v2.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"dex-beat.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"saos-act.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-ci.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"key-census-rel",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "778148f708d4",
+        "engineHead": "a47f50615a00",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,7 +29,7 @@
           "2026-11-05": 10,
           "2026-11-06": 9,
           "2026-11-07": 9,
-          "2026-11-08": 4
+          "2026-11-08": 5
         },
         "logWindow": 200
       }
