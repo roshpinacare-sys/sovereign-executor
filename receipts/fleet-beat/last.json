@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-08T09:50:10.514982+00:00",
+  "at": "2026-11-08T10:52:12.664658+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"dex-beat.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"saos-act.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-ci.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"key-census-rel",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-integrity.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"gitleaks.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"pf-artery-keeper.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"office-ci.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"key-census-relay-v2.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"g",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
