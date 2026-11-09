@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-09T18:35:27.722755+00:00",
+  "at": "2026-11-09T19:37:04.612261+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-scout.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"identity-guard.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"pages-deploy.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"runtime-pacemaker.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 1}, {\"repo",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-autotrade-hedge-gate.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-scout.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"ladder-refresh.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"key-census-relay-v2.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "b39e4024567c",
+        "engineHead": "acee56ac0a62",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,7 +29,7 @@
           "2026-11-06": 9,
           "2026-11-07": 9,
           "2026-11-08": 10,
-          "2026-11-09": 7
+          "2026-11-09": 8
         },
         "logWindow": 200
       }
