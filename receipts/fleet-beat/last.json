@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-14T10:41:39.614985+00:00",
+  "at": "2026-11-14T11:43:27.204268+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 1}, {\"repo\": \"saos-runtime\", \"wf\": \"escrow-payroll.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}]",
+        "REDBOARD: [{\"repo\": \"Domain\", \"wf\": \"economy-engine.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 1}, {\"repo\": \"saos-runtime\", \"wf\": \"escrow-payroll.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}]",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
