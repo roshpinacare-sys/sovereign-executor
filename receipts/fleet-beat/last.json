@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-16T04:42:42.459030+00:00",
+  "at": "2026-11-16T05:44:32.108649+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-decision-truth.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-pacer.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-scribe.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-selfheal.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-treasury.yml\", \"redStreak\": 1}, ",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-pacer.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-scribe.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-selfheal.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-treasury.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"artery-wallet.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"artery-integrity-twin.yml\", \"redStreak\": 1}, ",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "d88dc85059c0",
+        "engineHead": "9d6f0af32eae",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,7 +29,7 @@
           "2026-11-13": 10,
           "2026-11-14": 10,
           "2026-11-15": 9,
-          "2026-11-16": 1
+          "2026-11-16": 2
         },
         "logWindow": 200
       }
