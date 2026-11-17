@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-17T22:53:22.272526+00:00",
+  "at": "2026-11-17T23:54:41.565127+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"cloud-pulse.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"grid-trigger-twin.yml\", \"redStreak\": 1}, {\"repo\": \"dynamis\", \"wf\": \"fill-watcher.yml\", \"redStreak\": 3}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"console-publish.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"weave-census.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"cloud-pulse.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"ladder-refresh.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\",",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "RPC-DGPO-FAIL",
-        "engineHead": "09bb35a2a2e8",
+        "engineHead": "e77c1e4f2ef9",
         "selftest": "PASS",
         "voterStatus": null,
         "candidatesScanned": null,
@@ -29,7 +29,7 @@
           "2026-11-14": 10,
           "2026-11-15": 9,
           "2026-11-16": 9,
-          "2026-11-17": 7
+          "2026-11-17": 9
         },
         "logWindow": 200
       }
