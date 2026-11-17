@@ -1,14 +1,17 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-17T21:51:51.337567+00:00",
+  "at": "2026-11-17T22:53:22.272526+00:00",
   "tasks": 4,
-  "failed": 2,
+  "failed": 0,
   "results": [
     {
       "task": "private-census",
-      "ok": false,
-      "tail": [],
-      "err": "~~~~~~~~~^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
+      "ok": true,
+      "tail": [
+        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"cloud-pulse.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"grid-trigger-twin.yml\", \"redStreak\": 1}, {\"repo\": \"dynamis\", \"wf\": \"fill-watcher.yml\", \"redStreak\": 3}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina",
+        "REPO-ACTIONS-DISABLED: []"
+      ],
+      "err": ""
     },
     {
       "task": "yield-snapshot",
@@ -33,9 +36,9 @@
     },
     {
       "task": "actions-guard",
-      "ok": false,
+      "ok": true,
       "tail": [
-        "actions-guard: FAIL-CLOSED — no repos visible; refusing to act blind"
+        "actions-guard: scanned=54 alreadyOn=54 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
       ],
       "err": ""
     },
