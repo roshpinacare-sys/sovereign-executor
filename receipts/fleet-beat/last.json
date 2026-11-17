@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-17T09:36:47.426073+00:00",
+  "at": "2026-11-17T10:38:01.333406+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"artery-grid.yml\", \"redStreak\": 1}, {\"repo\": \"Autonomy\", \"wf\": \"selfhood.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"cloud-pulse.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"dynamis\", \"wf\": \"fill-watcher.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"network-census.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"operator-console.yml\", \"redStreak\": 1}, {\"repo\": \"dynamis\", \"wf\": \"fill-watcher.yml\", \"redStreak\": 2}, {\"repo\": \"Flee",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -17,11 +17,11 @@
       "task": "yield-snapshot",
       "ok": true,
       "snapshot": {
-        "verdict": "INTEL-OK",
-        "engineHead": "82737bbe30c7",
+        "verdict": "RPC-DGPO-FAIL",
+        "engineHead": "78057932912f",
         "selftest": "PASS",
-        "voterStatus": "read-ok",
-        "candidatesScanned": 480,
+        "voterStatus": null,
+        "candidatesScanned": null,
         "receiptsPerDay": {
           "2026-11-11": 8,
           "2026-11-12": 9,
@@ -29,7 +29,7 @@
           "2026-11-14": 10,
           "2026-11-15": 9,
           "2026-11-16": 9,
-          "2026-11-17": 3
+          "2026-11-17": 4
         },
         "logWindow": 200
       }
