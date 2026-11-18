@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-18T02:58:23.274685+00:00",
+  "at": "2026-11-18T03:59:37.369605+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"operator-console.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 1}, {\"repo\": \"Sandbox\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 3}, {\"repo\": \"saos-sover",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"cloud-pulse.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-fleet.yml\", \"redStreak\": 1}, {\"repo\": \"Sandbox\", \"wf\": \"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
