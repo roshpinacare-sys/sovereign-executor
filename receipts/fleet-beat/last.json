@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-18T13:11:31.753075+00:00",
+  "at": "2026-11-18T14:12:59.730942+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 9}, {\"repo\": \"Domain\", \"wf\": \"cloud-pulse.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"economy-engine.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"org-selftests.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina\", \"wf\"",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"fleet-yield.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 15}, {\"repo\": \"Domain\", \"wf\": \"cloud-pulse.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"fill-ledger-cron.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"org-selftests.yml\", \"redStreak\": 1}, {\"repo\": \"FleetHQ\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"roshpina\"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "RPC-DGPO-FAIL",
-        "engineHead": "be1a742223c3",
+        "engineHead": "d70d5c25ed96",
         "selftest": "PASS",
         "voterStatus": null,
         "candidatesScanned": null,
@@ -29,7 +29,7 @@
           "2026-11-15": 9,
           "2026-11-16": 9,
           "2026-11-17": 9,
-          "2026-11-18": 6
+          "2026-11-18": 7
         },
         "logWindow": 200
       }
