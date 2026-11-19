@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-19T19:54:08.822209+00:00",
+  "at": "2026-11-19T20:55:07.620531+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"pages-deploy.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"identity-guard.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"roshpinacare-sys.github.io\", \"wf\": \"pages-deploy.yml\", \"redStreak\": 1}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\"",
+        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 17}, {\"repo\": \"Domain\", \"wf\": \"saos-act.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"site-link-audit.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"saos-s",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -18,7 +18,7 @@
       "ok": true,
       "snapshot": {
         "verdict": "INTEL-OK",
-        "engineHead": "eaadd604e21c",
+        "engineHead": "74a3e848e5b3",
         "selftest": "PASS",
         "voterStatus": "read-ok",
         "candidatesScanned": 480,
@@ -29,7 +29,7 @@
           "2026-11-16": 9,
           "2026-11-17": 9,
           "2026-11-18": 11,
-          "2026-11-19": 7
+          "2026-11-19": 8
         },
         "logWindow": 200
       }
@@ -38,7 +38,7 @@
       "task": "actions-guard",
       "ok": true,
       "tail": [
-        "actions-guard: scanned=54 alreadyOn=54 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: scanned=55 alreadyOn=55 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
       ],
       "err": ""
     },
