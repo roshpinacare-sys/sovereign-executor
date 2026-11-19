@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-19T20:55:07.620531+00:00",
+  "at": "2026-11-19T21:56:56.639472+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 17}, {\"repo\": \"Domain\", \"wf\": \"saos-act.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"site-link-audit.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"saos-s",
+        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 4}, {\"repo\": \"Domain\", \"wf\": \"economy-engine.yml\", \"redStreak\": 1}, {\"repo\": \"Domain\", \"wf\": \"saos-act.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"saos-sov",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
