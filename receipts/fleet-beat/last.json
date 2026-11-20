@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-20T10:13:15.998912+00:00",
+  "at": "2026-11-20T11:14:51.333408+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 16}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"dependabot-updates\", \"redStreak\": 2}, {\"repo\": \"Zip\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}",
+        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 17}, {\"repo\": \"Domain\", \"wf\": \"site-link-audit.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"dependabot-updates\", \"redStreak\"",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
