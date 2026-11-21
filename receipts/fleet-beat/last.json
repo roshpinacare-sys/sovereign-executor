@@ -1,6 +1,6 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-21T07:41:25.350491+00:00",
+  "at": "2026-11-21T08:42:35.664626+00:00",
   "tasks": 4,
   "failed": 0,
   "results": [
@@ -8,7 +8,7 @@
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 11}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-grid.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-integrity.yml\", \"redStreak\": 1}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"",
+        "REDBOARD: [{\"repo\": \"Autonomy\", \"wf\": \"selfhood.yml\", \"redStreak\": 2}, {\"repo\": \"Console\", \"wf\": \"pages-deploy.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 16}, {\"repo\": \"Domain\", \"wf\": \"daily-digest.yml\", \"redStreak\": 2}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"ar",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
