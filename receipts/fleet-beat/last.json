@@ -1,14 +1,14 @@
 {
   "schema": "saos.executor.fleet-beat/1",
-  "at": "2026-11-20T23:31:23.603154+00:00",
+  "at": "2026-11-21T00:33:07.491043+00:00",
   "tasks": 4,
-  "failed": 0,
+  "failed": 1,
   "results": [
     {
       "task": "private-census",
       "ok": true,
       "tail": [
-        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"saos-fold.yml\", \"redStreak\": 1}, {\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 16}, {\"repo\": \"Domain\", \"wf\": \"site-link-audit.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"roshpinacare-sys.github.io\", \"wf\": \"pages-deploy.yml\", \"redStreak\": 1}, {\"repo\"",
+        "REDBOARD: [{\"repo\": \"Console\", \"wf\": \"truth-gate.yml\", \"redStreak\": 17}, {\"repo\": \"Domain\", \"wf\": \"site-link-audit.yml\", \"redStreak\": 1}, {\"repo\": \"giant\", \"wf\": \"dependabot-updates\", \"redStreak\": 1}, {\"repo\": \"roshpina\", \"wf\": \"gitleaks.yml\", \"redStreak\": 2}, {\"repo\": \"Sandbox\", \"wf\": \"artery-grid.yml\", \"redStreak\": 2}, {\"repo\": \"saos-sovereign-foundry\", \"wf\": \"gitleaks.yml\", \"redStreak\": 43}, {\"repo\": \"sa",
         "REPO-ACTIONS-DISABLED: []"
       ],
       "err": ""
@@ -36,9 +36,9 @@
     },
     {
       "task": "actions-guard",
-      "ok": true,
+      "ok": false,
       "tail": [
-        "actions-guard: scanned=55 alreadyOn=55 reArmed=0 verified=0 outOfScope=0 failed=0 watcherPulse=coverage-ok"
+        "actions-guard: FAIL-CLOSED — no repos visible; refusing to act blind"
       ],
       "err": ""
     },
